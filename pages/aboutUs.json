@@ -1,0 +1,31 @@
+{
+	"title": "About",
+	"header": "About Us",
+	"body": [
+		"Go Int. Reifen and More, is primarily involve in the selling of car tire all over the globe. We also repair tire, and get them back to good shape. And if that tier is worn out and old, bring it to us for recycling.",
+		"Looking for premium tires? We import tires from all over the globe just so you can get the very best. Along with importing, we can export that tire to your country and get it to you."
+	],
+	"services": [
+		"Servicing and repairing of worn out tires, Let's get that tire back to shape.",
+		"We import premium tires form all over the globe, so we can get them to you.",
+		"Exporting tires all over the word, getting you the right brand",
+		"Buy your next tire from us. Trust us, we will not disapoint",
+		"We just want to let you know that we got your back. Your safty is our bigest consign.",
+		"Don't use that worn out tire one more day! Bring it to us for recycling, we recycle old worn out tire and get you something better."
+	],
+	"whyUs": {
+		"title": "Why work with us?",
+		"body": [
+			"Our service begins with a careful internal and external inspection of your tire by one of our tire technicians to determine the cause and extent of any damage. This allows us to determine if your tire can be repaired or will need to be replaced.",
+			"If your flat tire, run-flat tire, or underinflated tire is fixable, we'll repair it in accordance with the U.S. Tire Manufacturers Association (USTMA) guidelines by plugging or patching any punctures from the inside."
+		]
+	},
+	"region": {
+		"title": "New elements added to the package",
+		"note": {
+			"title": "Possible region for tire repair",
+			"text": "Due to the fact that our only branch base in Germany, we only repair tires in Germany. That is until we open more branches."
+		}
+	},
+	"endNote": "If your tire can't be repaired, we'll let you know that it's time to buy a new tire. Should you choose to purchase with Goodyear, we'll help you find a quality new one suited to your needs. We'll also rebalance your tires, and if necessary, reactivate your tire pressure monitoring system."
+}

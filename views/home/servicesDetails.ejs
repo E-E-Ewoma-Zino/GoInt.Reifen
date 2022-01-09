@@ -1,0 +1,52 @@
+<%- include("components/_head") %>
+	<%- include("components/_navbar") %>
+
+			<!-- Contact -->
+	<div id="contact" class="form-1">
+		<img class="decoration-star" src="/home/images/decoration-star.svg" alt="alternative">
+		<img class="decoration-star-2" src="/home/images/decoration-star.svg" alt="alternative">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="image-container">
+						<img class="img-fluid" src="/home/images/contact.png" alt="alternative">
+					</div> <!-- end of image-container -->
+				</div> <!-- end of col -->
+				<div class="col-lg-6">
+					<div class="text-container">
+						<h2>To &quot;<%= type %>&quot;, make a requst using the form</h2>
+						<!-- Contact Form -->
+						<form action="/services/<%= type %>" method="POST">
+							<div class="form-group">
+								<input type="text" name="name" class="form-control-input" placeholder="Name" required>
+							</div>
+							<div class="form-group">
+								<input type="email" name="email" class="form-control-input" placeholder="Email" required>
+							</div>
+							<div class="form-group">
+								<input type="tel" name="phoneNo" class="form-control-input" placeholder="Phone no" required>
+							</div>
+							<div class="form-group">
+								<textarea name="message" class="form-control-textarea" placeholder="Descride your request" required></textarea>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="form-control-submit-button">Submit</button>
+							</div>
+						</form>
+						<!-- end of contact form -->
+					</div> <!-- end of text-container -->
+				</div> <!-- end of col -->
+			</div> <!-- end of row -->
+		</div> <!-- end of container -->
+	</div> <!-- end of form-1 -->
+	<!-- end of contact -->
+
+
+			<%- include("utils/testimonials") %>
+
+<!-- components -->
+	<%- include("components/_footer") %>
+		<%- include("components/_scripts") %>
+			</body>
+
+			</html>

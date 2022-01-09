@@ -1,0 +1,170 @@
+<%- include("components/_head") %>
+	<%- include("components/_navbar") %>
+
+		<!-- Header -->
+		<header class="ex-header bg-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-10 offset-xl-1">
+						<h1>
+							Our Services
+						</h1>
+					</div> <!-- end of col -->
+				</div> <!-- end of row -->
+			</div> <!-- end of container -->
+		</header> <!-- end of ex-header -->
+		<!-- end of header -->
+
+		<!-- Basic -->
+		<div class="ex-basic-1 pt-5 pb-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<img class="img-fluid mt-5 mb-3" src="/home/images/article-details-large.jpg" alt="alternative">
+					</div> <!-- end of col -->
+				</div> <!-- end of row -->
+			</div> <!-- end of container -->
+		</div> <!-- end of ex-basic-1 -->
+		<!-- end of basic -->
+
+		<!-- Cards -->
+		<div class="ex-cards-1 pt-3 pb-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="mb-3">
+							Services We Offer
+						</h2>
+					</div>
+					<div class="col-lg-12">
+						<!-- Card -->
+						<div class="card hover" onclick="link({ url: 'services/<%= page.services_home_body[0] %>', name: '<%= page.services_home_body[0] %>', target: '' })">
+							<ul class="list-unstyled">
+								<li class="d-flex">
+									<span class="fa-stack">
+										<span class="fas fa-circle fa-stack-2x"></span>
+										<span class="fa-stack-1x">1</span>
+									</span>
+									<div class="flex-grow-1">
+										<img class="img-fluid" src="/home/images/article-details-large.jpg" alt="<%= page.services_home_body[0] %>">
+										<h5><%= page.services_home_body[0] %></h5>
+										<p><%= page.aboutUs_body_services[0] %></p>
+									</div>
+								</li>
+							</ul>
+						</div> <!-- end of card -->
+						<!-- end of card -->
+
+						<!-- Card -->
+						<div class="card hover" onclick="link({ url: 'services/<%= page.services_home_body[1] %>', name: '<%= page.services_home_body[1] %>', target: '' })">
+							<ul class="list-unstyled">
+								<li class="d-flex">
+									<span class="fa-stack">
+										<span class="fas fa-circle fa-stack-2x"></span>
+										<span class="fa-stack-1x">2</span>
+									</span>
+									<div class="flex-grow-1">
+										<img class="img-fluid" src="/home/images/article-details-large.jpg" alt="<%= page.services_home_body[1] %>">
+										<h5><%= page.services_home_body[1] %></h5>
+										<p><%= page.aboutUs_body_services[1] %></p>
+									</div>
+								</li>
+							</ul>
+						</div> <!-- end of card -->
+						<!-- end of card -->
+
+						<!-- Card -->
+						<div class="card hover" onclick="link({ url: 'services/<%= page.services_home_body[2] %>', name: '<%= page.services_home_body[2] %>', target: '' })">
+							<ul class="list-unstyled">
+								<li class="d-flex">
+									<span class="fa-stack">
+										<span class="fas fa-circle fa-stack-2x"></span>
+										<span class="fa-stack-1x">3</span>
+									</span>
+									<div class="flex-grow-1">
+										<img class="img-fluid" src="/home/images/article-details-large.jpg" alt="<%= page.services_home_body[2] %>">
+										<h5><%= page.services_home_body[2] %></h5>
+										<p><%= page.aboutUs_body_services[2] %></p>
+									</div>
+								</li>
+							</ul>
+						</div> <!-- end of card -->
+						<!-- end of card -->
+
+					</div> <!-- end of col -->
+				</div> <!-- end of row -->
+			</div> <!-- end of container -->
+		</div> <!-- end of ex-cards-1 -->
+		<!-- end of cards -->
+
+		<!-- Cards -->
+		<div class="ex-cards-1 pt-3 pb-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+
+						<!-- Card -->
+						<div class="card hover" onclick="link({ url: 'services/<%= page.services_home_body[3] %>', name: '<%= page.services_home_body[3] %>', target: '' })">
+							<ul class="list-unstyled">
+								<li class="d-flex">
+									<span class="fa-stack">
+										<span class="fas fa-circle fa-stack-2x"></span>
+										<span class="fa-stack-1x">4</span>
+									</span>
+									<div class="flex-grow-1">
+										<img class="img-fluid" src="/home/images/article-details-large.jpg" alt="<%= page.services_home_body[3] %>">
+										<h5><%= page.services_home_body[3] %></h5>
+										<p><%= page.aboutUs_body_services[3] %></p>
+									</div>
+								</li>
+							</ul>
+						</div> <!-- end of card -->
+						<!-- end of card -->
+
+						<!-- Card -->
+						<div class="card hover" onclick="link({ url: 'services/<%= page.services_home_body[4] %>', name: '<%= page.services_home_body[4] %>', target: '' })">
+							<ul class="list-unstyled">
+								<li class="d-flex">
+									<span class="fa-stack">
+										<span class="fas fa-circle fa-stack-2x"></span>
+										<span class="fa-stack-1x">5</span>
+									</span>
+									<div class="flex-grow-1">
+										<img class="img-fluid" src="/home/images/article-details-large.jpg" alt="<%= page.services_home_body[4] %>">
+										<h5><%= page.services_home_body[4] %></h5>
+										<p><%= page.aboutUs_body_services[4] %></p>
+									</div>
+								</li>
+							</ul>
+						</div> <!-- end of card -->
+						<!-- end of card -->
+
+						<!-- Card -->
+						<div class="card hover" onclick="link({ url: 'services/<%= page.services_home_body[5] %>', name: '<%= page.services_home_body[5] %>', target: '' })">
+							<ul class="list-unstyled">
+								<li class="d-flex">
+									<span class="fa-stack">
+										<span class="fas fa-circle fa-stack-2x"></span>
+										<span class="fa-stack-1x">6</span>
+									</span>
+									<div class="flex-grow-1">
+										<img class="img-fluid" src="/home/images/article-details-large.jpg" alt="<%= page.services_home_body[5] %>">
+										<h5><%= page.services_home_body[5] %></h5>
+										<p><%= page.aboutUs_body_services[5] %></p>
+									</div>
+								</li>
+							</ul>
+						</div> <!-- end of card -->
+						<!-- end of card -->
+
+					</div> <!-- end of col -->
+				</div> <!-- end of row -->
+			</div> <!-- end of container -->
+		</div> <!-- end of ex-cards-1 -->
+		<!-- end of cards -->
+
+		<%- include("components/_footer") %>
+			<%- include("components/_scripts") %>
+				</body>
+
+				</html>

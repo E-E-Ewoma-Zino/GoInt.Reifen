@@ -1,0 +1,23 @@
+{
+	"title": "Home",
+	"header": {
+		"title": "Tire Related Services",
+		"text": "Go Int. Reifen and More, is keenly to providing professional services to our customers."
+	},
+	"introduction": {
+		"title": "Supplying customers with quality tires all over the world",
+		"text": "Buy the perfect tires for your vehricle. What's that? You want to repair your vehicle tires? We got your back there too!"
+	},
+	"services": {
+		"title": "Services that we offer",
+		"text": "Selling and Repairing or tire and it's parts. Don't think that tire will last long? Bring it to us we got your back! Your safty is our priority",
+		"body": [
+			"Repairing",
+			"Importing",
+			"Exporting",
+			"Sell Tires",
+			"We Care",
+			"Recycling"
+		]
+	}
+}
