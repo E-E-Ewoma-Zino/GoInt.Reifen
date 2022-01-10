@@ -6,11 +6,11 @@ const userSchema = mongoose.Schema({
 	// Things needed for all user Schema
 	username: String,
 	password: String,
+	firstname: String,
+	lastname: String,
+	phoneNo: String,
 	// things need for a user for this site
-	ownedBooks: [{
-		ref: "Book",
-		type: mongoose.Schema.Types.ObjectId
-	}],
+	// 
 	// Things needed for the authorization for admin and user.
 	authLevel: {
 		type: Number,

@@ -1,0 +1,104 @@
+<%- include("components/_head") %>
+	<%- include("utils/preloader") %>
+		<%- include("utils/searchModel") %>
+			<%- include("components/_navbar") %>
+
+				<!-- Page Add Section Begin -->
+				<section class="page-add">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="page-breadcrumb">
+									<h2><div id="title" class="d-inline">Register</div> <span>.</span></h2>
+								</div>
+							</div>
+							<div class="col-lg-8">
+								<img src="img/add.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Page Add Section End -->
+
+				<!-- Login and Registration Begin -->
+				<section class="py-3 h-100">
+					<!-- Register -->
+					<div id="register">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-lg-6">
+									<form action="/store/register" method="POST" class="contact-form">
+										<div class="row">
+											<div class="col-lg-6">
+												<input type="text" name="firstname" placeholder="First Name">
+											</div>
+											<div class="col-lg-6">
+												<input type="text" name="lastname" placeholder="Last Name">
+											</div>
+											<div class="col-lg-12">
+												<!-- hidden -->
+												<input type="hidden" name="authLevel" value="0">
+												<input type="email" name="username" placeholder="E-mail">
+												<input type="tel" name="phoneNo" placeholder="Phone number">
+												<input type="password" name="password" placeholder="Password">
+											</div>
+											<div class="col-lg-12 d-flex flex-column flex-md-row justify-content-between align-items-center">
+												<span>Already have an account? <span class="hoverable text-s text-hover-p" onclick="switchForm(0)">Login</span> </span>
+												<button type="submit">Register</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Login -->
+					<div id="login">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-lg-6">
+									<form action="/store/login" method="POST" class="contact-form">
+										<div class="row">
+											<div class="col-lg-6">
+												<input type="email" name="username" placeholder="E-mail">
+											</div>
+											<div class="col-lg-6">
+												<input type="password" name="password" placeholder="Password">
+											</div>
+											<!-- hidden -->
+											<input type="hidden" name="authLevel" value="0">
+											<div class="col-lg-12 d-flex flex-column flex-md-row justify-content-between align-items-center">
+												<span>Don't have an account? <span class="hoverable text-s text-hover-p" onclick="switchForm(1)">Register</span> </span>
+												<button type="submit">LogIn</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Login and Registration End -->
+				<%- include("components/_footer") %>
+					<%- include("components/_script") %>
+				<script>
+					$("#login").hide();
+
+					function switchForm(num){
+						if(!num){
+							$("#register").slideUp("ease-out", () =>{
+								$("#title").text("LogIn");
+								$("#login").slideDown("ease-in");
+							});
+						}else{
+							$("#login").slideUp("ease-out", () =>{
+								$("#title").text("Register");
+								$("#register").slideDown("ease-in");
+							});
+						}
+					}
+				</script>
+
+						</body>
+
+						</html>

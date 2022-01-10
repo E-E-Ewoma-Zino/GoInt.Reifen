@@ -31,6 +31,33 @@
 /* Template default CSS
 /*----------------------------------------*/
 
+/* my code */
+:root{
+	--primary-color: #B0BCC2;
+	--secondary-color: #212529;
+}
+
+.text-p{
+	color: var(--primary-color);
+}
+
+.text-s{
+	color: var(--secondary-color);
+}
+
+.text-hover-p:hover{
+	color: var(--primary-color);
+}
+
+.text-hover-s:hover{
+	color: var(--secondary-color);
+}
+
+.hoverable{
+	cursor: pointer;
+}
+/*  */
+
 html,
 body {
 	height: 100%;

@@ -1,4 +1,4 @@
-// controlls the store home route
+// controlls the store categories route
 const page = require("../../libs/page");
 const error500 = require("../errors/error500");
 
@@ -8,7 +8,7 @@ module.exports = {
 			if(getPage_err){
 				return error500(req, res);
 			}else if (page){
-				res.render("store/index",{
+				res.render("store/categories",{
 					title: page.index_title,
 					page: page
 				});
@@ -18,3 +18,5 @@ module.exports = {
 		});
 	}
 }
+
+// make route for the pages, and page
