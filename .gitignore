@@ -119,6 +119,6 @@ dist
 uploads/
 
 # RoyalUI
-public/RoyalUI/fonts
-public/RoyalUI/images
-public/RoyalUI/vendors
+public/admin/fonts
+public/admin/images
+public/admin/vendors

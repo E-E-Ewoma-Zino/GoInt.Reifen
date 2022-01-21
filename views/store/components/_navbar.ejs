@@ -1,21 +1,9 @@
 <!-- Header Section Begin -->
 <header class="header-section">
 	<div class="container-fluid">
-		<div class="inner-header">
+		<div class="inner-header d-flex justify-content-between align-items-center">
 			<div class="logo">
 				<a href="/store/home"><img src="/store/img/logo.png" alt=""></a>
-			</div>
-			<!-- <div class="header-right">
-				<img src="/store/img/icons/search.png" alt="" class="search-trigger">
-				<a href="/store/shopping-cart">
-					<img src="/store/img/icons/bag.png" alt="">
-					<span>2</span>
-				</a>
-			</div> -->
-			<div class="user-access">
-				<!-- <img src="/store/img/icons/man.png" alt=""> -->
-				<a href="/store/login-register">LogIn</a>
-				<!-- <a href="/store/#" class="in">Sign in</a> -->
 			</div>
 			<nav class="main-menu mobile-menu">
 				<ul>
@@ -31,6 +19,38 @@
 					<li><a href="/store/contact">Contact</a></li>
 				</ul>
 			</nav>
+			<div class="nav-options d-flex justify-content-end align-items-center position-relative">
+				<img src="/store/img/icons/search.png" alt="" class="search-trigger hoverable mr-3">
+				<% if(!user.login) { %>
+					<a href="/store/login-register">
+						<img src="/store/img/icons/man.png" alt="empty profile img">
+					</a>
+					<!-- <a href="/store/#" class="in">Sign in</a> -->
+					<% }else{ %>
+						<a class="mr-3" href="/store/shopping-cart">
+							<img src="/store/img/icons/bag.png" alt="cart img">
+							<span>2</span>
+						</a>
+						<img src="/store/img/profile.jpg" class="img-fluid profile hoverable" alt="profile img">
+						<!-- <span><%= user.name.substr(0,1).toUpperCase() %></span> -->
+						<% } %>
+						<div class="user-nav">
+							<ul class="nav flex-column">
+								<li class="nav-item text-right bg-p bg-hover-s">
+									<a class="nav-link text-white" href="#">Link</a>
+								</li>
+								<li class="nav-item text-right bg-p bg-hover-s">
+									<a class="nav-link text-white" href="#">Link</a>
+								</li>
+								<li class="nav-item text-right bg-p bg-hover-s">
+									<a class="nav-link text-white" href="#">Link</a>
+								</li>
+								<li class="nav-item text-right bg-p bg-hover-s">
+									<a class="nav-link text-white" href="/store/logout">Logout</a>
+								</li>
+							</ul>
+						</div>
+			</div>
 		</div>
 	</div>
 </header>
@@ -53,9 +73,9 @@
 			</div>
 			<div class="col-md-4 text-left text-xl-right">
 				<div class="header-item">
-				<img src="/store/img/icons/sales.png" alt="">
-				<p>30% off on dresses. Use code: 30OFF</p>
-			</div>
+					<img src="/store/img/icons/sales.png" alt="">
+					<p>30% off on dresses. Use code: 30OFF</p>
+				</div>
 			</div>
 		</div>
 	</div>

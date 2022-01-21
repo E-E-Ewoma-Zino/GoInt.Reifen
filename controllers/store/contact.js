@@ -9,6 +9,7 @@ module.exports = {
 				return error500(req, res);
 			}else if (page){
 				res.render("store/contact",{
+					user: req.userDetails,
 					title: page.index_title,
 					page: page
 				});

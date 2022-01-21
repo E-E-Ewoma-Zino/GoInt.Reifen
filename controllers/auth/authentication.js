@@ -50,7 +50,7 @@ module.exports = {
 				}
 
 				// checking where the auth is coming from
-				if (req.body.auth) {
+				if (req.body.authLevel) {
 					// because i have done the authLevel checker function i can do this here
 					if (!user.authLevel) {
 						bird.message("success", "Welcome back " + req.user.username);

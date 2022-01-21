@@ -32,30 +32,66 @@
 /*----------------------------------------*/
 
 /* my code */
-:root{
+:root {
 	--primary-color: #B0BCC2;
 	--secondary-color: #212529;
 }
 
-.text-p{
+.text-p {
 	color: var(--primary-color);
 }
 
-.text-s{
+.text-s {
 	color: var(--secondary-color);
 }
 
-.text-hover-p:hover{
+.text-hover-p:hover {
 	color: var(--primary-color);
 }
 
-.text-hover-s:hover{
+.text-hover-s:hover {
 	color: var(--secondary-color);
 }
 
-.hoverable{
+.bg-p {
+	background-color: var(--primary-color);
+	transition: all 0.15s ease-out;
+}
+
+.bg-s {
+	background-color: var(--secondary-color);
+}
+
+.bg-hover-p:hover {
+	background-color: var(--primary-color);
+}
+
+.bg-hover-s:hover {
+	background-color: var(--secondary-color);
+}
+
+.hoverable {
 	cursor: pointer;
 }
+
+.profile {
+	width: 20%;
+	height: auto;
+	border-radius: 50%;
+}
+
+.user-nav {
+	position: absolute;
+	top: 122%;
+	left: 43%;
+	z-index: 1;
+	width: 60%;
+	overflow: hidden;
+	border-bottom-left-radius: 10vmin;
+	background-color: var(--primary-color);
+	box-shadow: 3px 4px 17px 3px rgb(114 100 100);
+}
+
 /*  */
 
 html,
@@ -234,12 +270,14 @@ ol {
 		border: 4px solid #f44336;
 		border-left-color: transparent;
 	}
+
 	50% {
 		-webkit-transform: rotate(180deg);
 		transform: rotate(180deg);
 		border: 4px solid #673ab7;
 		border-left-color: transparent;
 	}
+
 	100% {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
@@ -254,11 +292,13 @@ ol {
 		border: 4px solid #f44336;
 		border-left-color: transparent;
 	}
+
 	50% {
 		-webkit-transform: rotate(180deg);
 		border: 4px solid #673ab7;
 		border-left-color: transparent;
 	}
+
 	100% {
 		-webkit-transform: rotate(360deg);
 		border: 4px solid #f44336;
@@ -294,32 +334,7 @@ ol {
 	padding-right: 45px;
 }
 
-.inner-header .logo {
-	float: left;
-}
-
-.inner-header .header-right {
-	float: right;
-	line-height: 30px;
-}
-
-.inner-header .header-right img {
-	display: inline-block;
-	margin-right: 20px;
-	cursor: pointer;
-}
-
-.inner-header .header-right a {
-	display: inline-block;
-	position: relative;
-}
-
-.inner-header .header-right a img {
-	margin-right: 0;
-	margin-left: 4px;
-}
-
-.inner-header .header-right a span {
+.inner-header .nav-options a span {
 	font-size: 11px;
 	color: #1e1e1e;
 	width: 18px;
@@ -336,12 +351,7 @@ ol {
 	top: 14px;
 }
 
-.inner-header .user-access {
-	float: right;
-	margin-right: 100px;
-}
-
-.inner-header .user-access a {
+.inner-header .nav-options a {
 	color: #1e1e1e;
 	font-size: 16px;
 	display: inline-block;
@@ -350,23 +360,18 @@ ol {
 	line-height: 42px;
 }
 
-.inner-header .user-access a.in {
+.inner-header .nav-options a.in {
 	color: #838383;
 	margin-left: 15px;
 	position: relative;
 }
 
-.inner-header .user-access a.in::before {
+.inner-header .nav-options a.in::before {
 	position: absolute;
 	left: -13px;
 	top: 1px;
 	color: #1e1e1e;
 	content: "/";
-}
-
-.inner-header .main-menu {
-	float: right;
-	margin-right: 150px;
 }
 
 .inner-header .main-menu ul li {
@@ -2074,68 +2079,49 @@ ol {
 }
 
 /* ---------------------------------- Responsive Media Styles ---------------------------------*/
-
-@media only screen and (min-width: 1500px) and (max-width: 1920px) {
-	.inner-header .user-access {
-		float: right;
-		margin-right: 200px;
-	}
-	.inner-header .main-menu {
-		float: right;
-		margin-right: 238px;
-	}
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1340px) {
-	.inner-header .user-access {
-		margin-right: 60px;
-	}
-	.inner-header .main-menu {
-		margin-right: 55px;
-	}
-}
-
-/* Medium Device : 1280px */
-
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-	.inner-header .main-menu {
-		margin-right: 70px;
-	}
 	.inner-header .main-menu ul li {
 		margin-left: 45px;
 	}
-	.inner-header .user-access {
-		display: none;
-	}
+
 	.header-info .shipping-chrg {
 		margin-right: 10px;
 	}
+
 	.lookbok-left {
 		padding-top: 0px;
 	}
+
 	.lookbok-pic .pic-text {
 		font-size: 95px;
 		line-height: 68px;
 	}
+
 	.social-links a {
 		margin-right: 50px;
 	}
+
 	.product-content {
 		padding-top: 20px;
 	}
+
 	.product-content .p-info {
 		margin-top: 35px;
 	}
+
 	.cart-btn .site-btn.update-btn {
 		margin-right: 0;
 		padding: 16px 35px;
 	}
+
 	.header-info .shipping-chrg p {
 		font-size: 13px;
 	}
+
 	.logo-section {
 		padding: 70px 0;
 	}
+
 	.order-table .cart-item p.product-name {
 		font-size: 12px;
 		font-weight: 600;
@@ -2150,59 +2136,69 @@ ol {
 		padding-left: 0;
 		padding-right: 0;
 	}
-	.inner-header .main-menu {
-		margin-right: 50px;
-	}
+
 	.inner-header .main-menu ul li {
 		margin-left: 30px;
 	}
+
 	.header-info .shipping-chrg {
 		float: none;
 		margin-right: 0;
 	}
+
 	.header-info .student-disc {
 		float: none;
 	}
+
 	.header-info .coupon-code {
 		float: none;
 	}
-	.inner-header .user-access {
-		display: none;
-	}
+
 	.page-add .page-breadcrumb {
 		margin-bottom: 20px;
 	}
+
 	.lookbok-left {
 		margin-bottom: 30px;
 	}
+
 	.checkout-form .in-name {
 		text-align: left;
 	}
+
 	.social-links a {
 		margin-right: 15px;
 	}
+
 	.social-links a i {
 		margin-right: 10px;
 	}
+
 	.cart-btn {
 		padding: 50px 30px;
 	}
+
 	.cart-btn .coupon-input {
 		padding-left: 0;
 		margin-bottom: 30px;
 	}
+
 	.cart-btn .coupon-input input {
 		width: 100%;
 	}
+
 	.shipping-info .cs-item {
 		margin-right: 15px;
 	}
+
 	.contact-form {
 		margin-bottom: 40px;
 	}
+
 	.logo-section {
 		padding: 70px 0;
 	}
+
 	.lookbok-left {
 		padding-top: 0;
 	}
@@ -2215,109 +2211,133 @@ ol {
 		height: auto;
 		padding-bottom: 0;
 	}
+
 	.inner-header {
-		overflow: hidden;
+		/* overflow: hidden; */
 	}
-	.inner-header .user-access {
-		margin-right: 10px;
-	}
+
 	.slicknav_menu {
 		display: block;
 		margin-top: 10px;
 	}
-	.inner-header .header-right {
-		margin-right: 20px;
-		margin-top: 4px;
-	}
+
 	.slicknav_nav ul {
 		margin: 0 0 0 0;
 	}
+
 	.main-menu {
 		display: none;
 	}
+
 	.header-section {
-		overflow: hidden;
+		/* overflow: hidden; */
 	}
+
 	.single-slider-item h1 {
 		font-size: 72px;
 	}
+
 	.single-slider-item h2 {
 		font-size: 42px;
 	}
+
 	.lookbok-left {
 		margin-bottom: 30px;
 	}
+
 	.contact-form {
 		margin-bottom: 40px;
 	}
+
 	.newslatter-form form button {
 		position: relative;
 		margin-top: 15px;
 		width: 100%;
 	}
+
 	.header-info .shipping-chrg {
 		float: none;
 		margin-right: 0;
 	}
+
 	.header-info .student-disc {
 		float: none;
 	}
+
 	.header-info .coupon-code {
 		float: none;
 	}
+
 	.hero-items .owl-nav button[type=button] {
 		left: 5px;
 	}
+
 	.social-links {
 		text-align: center;
 	}
+
 	.social-links a {
 		margin-right: 20px;
 	}
+
 	.social-links a i {
 		margin-right: 0;
 	}
+
 	.social-links a span {
 		display: none;
 	}
+
 	.lookbok-pic .pic-text {
 		font-size: 115px;
 		line-height: 82px;
 	}
+
 	.page-add .page-breadcrumb {
 		margin-bottom: 20px;
 	}
+
 	.cart-table {
 		overflow-y: auto;
 	}
+
 	.cart-btn {
 		padding: 50px 30px;
 	}
+
 	.cart-btn .coupon-input {
 		padding-left: 0;
 		margin-bottom: 30px;
 	}
+
 	.cart-btn .coupon-input input {
 		width: 100%;
 	}
+
 	.shipping-info .cs-item {
 		margin-bottom: 15px;
 	}
+
 	.total-info .total-table {
 		overflow-y: auto;
 	}
+
 	.checkout-form .in-name {
 		text-align: left;
 	}
+
 	.logo-section {
 		padding: 70px 0;
 	}
+
 	.lookbok-left {
 		padding-top: 0;
 	}
+
 	.header-info .header-item {
 		margin-bottom: 7px;
 	}
+
 	.search-model-form input {
 		width: 100%;
 	}
@@ -2330,61 +2350,75 @@ ol {
 		padding-left: 0;
 		padding-right: 0;
 	}
-	.inner-header .header-right {
-		margin-right: 0;
-	}
+
 	.features-box .single-box-item.first-box .box-text {
 		right: 9px;
 		top: 7px;
 	}
+
 	.features-box .single-box-item .box-text h2 {
 		font-size: 40px;
 	}
+
 	.features-box .single-box-item.first-box .box-text .trend-alert {
 		margin-bottom: 7px;
 	}
+
 	.features-box .single-box-item.second-box .box-text {
 		left: 20px;
 		top: 56px;
 	}
+
 	.features-box .single-box-item.large-box .box-text {
 		left: 20px;
 		top: 28px;
 	}
+
 	.features-box .single-box-item.large-box .box-text h2 {
 		font-size: 40px;
 	}
+
 	.product-filter .product-controls li {
 		margin-bottom: 10px;
 	}
+
 	.section-title h2 {
 		font-size: 36px;
 	}
+
 	.lookbok-pic img {
 		height: auto;
 	}
+
 	.lookbok-pic .pic-text {
 		font-size: 65px;
 		line-height: 47px;
 	}
+
 	.social-links a {
 		margin-right: 10px;
 	}
+
 	.product-content .product-quantity {
 		margin-bottom: 15px;
 	}
+
 	.cart-btn .coupon-input input {
 		width: 100%;
 	}
+
 	.cart-btn .site-btn.update-btn {
 		margin-right: 0;
 	}
+
 	.cart-btn .site-btn.clear-btn {
 		margin-bottom: 15px;
 	}
+
 	.header-info .header-item img {
 		display: block;
 	}
+
 	.header-info {
 		padding: 10px 0;
 	}

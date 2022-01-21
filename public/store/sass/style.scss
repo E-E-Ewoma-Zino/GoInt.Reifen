@@ -274,7 +274,7 @@ ol {
 	.logo {
 		float: left;
 	}
-	.header-right {
+	 .nav-options {
 		float: right;
 		line-height: 30px;
 		img {
@@ -307,7 +307,7 @@ ol {
 			}
 		}
 	}
-	.user-access {
+	 .nav-options {
 		float: right;
 		margin-right: 100px;
 		a {
@@ -1927,7 +1927,7 @@ ol {
 /* ---------------------------------- Responsive Media Styles ---------------------------------*/
 
 @media only screen and (min-width: 1500px) and (max-width: 1920px) {
-	.inner-header .user-access {
+	.inner-header  .nav-options {
 		float: right;
 		margin-right: 200px;
 	}
@@ -1938,7 +1938,7 @@ ol {
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1340px) {
-	.inner-header .user-access {
+	.inner-header  .nav-options {
 		margin-right: 60px;
 	}
 	.inner-header .main-menu {
@@ -1955,7 +1955,7 @@ ol {
 	.inner-header .main-menu ul li {
 		margin-left: 45px;
 	}
-	.inner-header .user-access {
+	.inner-header  .nav-options {
 		display: none;
 	}
 	.header-info .shipping-chrg {
@@ -2017,7 +2017,7 @@ ol {
 	.header-info .coupon-code {
 		float: none;
 	}
-	.inner-header .user-access {
+	.inner-header  .nav-options {
 		display: none;
 	}
 	.page-add .page-breadcrumb {
@@ -2069,14 +2069,14 @@ ol {
 	.inner-header {
 		overflow: hidden;
 	}
-	.inner-header .user-access {
+	.inner-header  .nav-options {
 		margin-right: 10px;
 	}
 	.slicknav_menu {
 		display: block;
 		margin-top: 10px;
 	}
-	.inner-header .header-right {
+	.inner-header  .nav-options {
 		margin-right: 20px;
 		margin-top: 4px;
 	}
@@ -2181,7 +2181,7 @@ ol {
 		padding-left: 0;
 		padding-right: 0;
 	}
-	.inner-header .header-right {
+	.inner-header  .nav-options {
 		margin-right: 0;
 	}
 	.features-box .single-box-item.first-box .box-text {
