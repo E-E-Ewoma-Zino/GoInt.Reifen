@@ -11,6 +11,6 @@ module.exports = (req, res, next) => {
 	else {
 		// _bird.message("warning", "You are not logIn yet.");
 		console.log("Access Denied!");
-		return res.status();
+		return res.status(401).send();
 	}
 }

@@ -12,7 +12,8 @@ class Product extends edit {
 			if(findProduct_err){
 				return callback(findProduct_err, null);
 			}else if(foundProduct){
-				foundProduct.updateOne({}, {$push: {categories: cId}}, (updateProduct_err, done)=>{
+				console.log("heyyyyy", foundProduct);
+				foundProduct.updateOne({_id: foundProduct}, {$push: {categories: cId}}, (updateProduct_err, done)=>{
 					if(updateProduct_err){
 						return callback(updateProduct_err, null);
 					}else if(done){

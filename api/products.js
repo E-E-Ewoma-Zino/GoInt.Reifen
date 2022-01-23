@@ -4,7 +4,6 @@ const category = require("../libs/category");
 
 module.exports = {
 	get: (req, res) => {
-		console.log("Get");
 		product.find((find_err, allProducts) => {
 			if (find_err) {
 				console.error(":::findProduct_err", find_err);
@@ -21,6 +20,7 @@ module.exports = {
 		console.log("file:", req.files);
 		console.log("body:", req.body);
 
+		// If there is need create a db fro images so it can be independent... NOT IMPORTANT BECAUSE OF TIME
 		product.create({
 			name: req.body.name[0].toLowerCase(),
 			img: req.files,

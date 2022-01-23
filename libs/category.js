@@ -12,7 +12,8 @@ class Category extends Edit{
 			this.findByName(name, (findName_err, foundCategory)=>{
 				if(findName_err){
 					return callback(findName_err, null);
-				}else if(foundCategory){
+				}else if(foundCategory.length){
+					console.log("this is it", foundCategory);
 					foundCategory.updateOne({}, {$push: {product: id}}, (update_err, finishUpdate)=>{
 						if(update_err){
 							return callback(update_err, null);
