@@ -2,7 +2,7 @@
 
 // ================================== GET CATEGORIES =========================
 // Get all the avaliable categories
-axios.get("/api/products").then((res) => {
+axios.get("/api/category").then((res) => {
 	console.log("res:", res);
 
 	if (!res.data.message.length) return messager({
@@ -31,7 +31,6 @@ axios.get("/api/products").then((res) => {
 // adds an new category to the list of category to be submitted
 const newCategory = [];
 function addNewCategory(name) {
-	console.log("add");
 	return newCategory.push(name);
 }
 
@@ -106,12 +105,38 @@ formData.onsubmit = async (e) => {
 	const productForm = new FormData(formData);
 	
 	getNewCategory().forEach(category => {
-		productForm.append("categories", category);
+		productForm.append("categories", category.toLowerCase());
 	});
 
 	axios.post("/api/products", productForm).then((res) => {
 		console.log("res:", res);
+		if(res.data.status) messager({
+			replace: ["danger", "success"],
+			message: "Added new product"
+		});
 	}).catch((err) => {
 		console.error(":::err", err);
 	});
 };
+
+// ==================== Clear Form ============================
+function clearForm() {
+	const inputs = document.getElementsByTagName("input");
+	const textArea = document.getElementsByTagName("textarea");
+	const seletedCategory = document.getElementById("seletedCategory");
+
+	// clear inputs
+	for (let i = 0; i < inputs.length; i++) {
+		const input = inputs[i];
+		input.value = null;
+	}
+
+	// clear textArea
+	textArea.value = null;
+
+	// clear newCategory array
+	newCategory = [];
+
+	// clear the activeCategory in the dom
+	seletedCategory.innerHTML = null;
+}

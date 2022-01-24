@@ -1,10 +1,10 @@
 // ALL ROUTES GOINT TO THE ADMIN "/admin" WILL BE IN THIS PAGE
 const express = require("express");
-const products = require("../api/products");
 const uploads = require("../config/multer");
+const products = require("../api/products");
+const category = require("../api/categories");
 const login = require("../controllers/admin/login");
 const orders = require("../controllers/admin/order");
-const category = require("../controllers/admin/category");
 const apiRedirect = require("../middleware/apiRedirect");
 
 // This router is for the home / routes
@@ -29,6 +29,6 @@ router.get("/orders", apiRedirect, (req, res) => orders.get(req, res));
 
 // @desc    category page
 // @route   GET /admin/category
-router.get("/category", apiRedirect, (req, res) => category.get(req, res));
+router.get("/category", (req, res) => category.get(req, res));
 
 module.exports = router;

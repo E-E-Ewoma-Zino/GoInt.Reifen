@@ -37,7 +37,7 @@ class Edit {
 			if (err) {
 				return callback(err, null);
 			} else if (schemaItem) {
-				return callback(null, schemaItem);
+				return callback(null, schemaItem[0]);
 			} else {
 				return callback(null, null);
 			}
@@ -58,13 +58,24 @@ class Edit {
 	}
 
 	// delete an item
-	remaove(Id, callback) {
-		this.schema.deleteOne({ _id: Id }, (err) => {
+	remove(id, callback) {
+		this.schema.deleteOne({ _id: id }, (err) => {
 			if (err) {
 				return callback(err, null);
-			} else if (schemaItem) {
-				return callback(null, schemaItem);
 			} else {
+				return callback(null, true);
+			}
+		});
+	}
+
+	// update an item
+	update({itemToupdateId: id, whatToUpdate: querry, options: opt, newUpdate: update}, callback){
+		this.schema.updateOne({ _id: id }, { [opt]: { [querry]: update } }, (err, done) => {
+			if (err) {
+				return callback(err, null);
+			} else if(done) {
+				return callback(null, done);
+			}else{
 				return callback(null, null);
 			}
 		});
