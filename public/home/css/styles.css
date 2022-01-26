@@ -36,12 +36,13 @@ Colors:
 /**************************/
 body,
 html {
-    width: 100%;
+	width: 100%;
 	height: 100%;
 }
 
-body, p {
-	color: #6c717b; 
+body,
+p {
+	color: #6c717b;
 	font: 400 1rem/1.625rem "Open Sans", sans-serif;
 }
 
@@ -156,7 +157,8 @@ a:hover {
 
 .btn-solid-reg:hover {
 	background-color: transparent;
-	color: #4555d2; /* needs to stay here because of the color property of a tag */
+	color: #4555d2;
+	/* needs to stay here because of the color property of a tag */
 	text-decoration: none;
 }
 
@@ -176,7 +178,8 @@ a:hover {
 
 .btn-solid-lg:hover {
 	background-color: transparent;
-	color: #4555d2; /* needs to stay here because of the color property of a tag */
+	color: #4555d2;
+	/* needs to stay here because of the color property of a tag */
 	text-decoration: none;
 }
 
@@ -256,18 +259,21 @@ a:hover {
 	background-color: #ffffff;
 	font-size: 0.875rem;
 	line-height: 1.5rem;
-	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
+	-webkit-appearance: none;
+	/* removes inner shadow on form inputs on ios safari */
 }
 
 .form-control-textarea {
 	display: block;
-	height: 8rem; /* used instead of html rows to normalize height between Chrome and IE/FF */
+	height: 8rem;
+	/* used instead of html rows to normalize height between Chrome and IE/FF */
 }
 
 .form-control-input:focus,
 .form-control-textarea:focus {
 	border: 1px solid #a1a1a1;
-	outline: none; /* Removes blue border on focus */
+	outline: none;
+	/* Removes blue border on focus */
 }
 
 .form-control-input:hover,
@@ -314,7 +320,7 @@ a:hover {
 }
 
 .navbar .logo-image img {
-    width: 124px;
+	width: 124px;
 	height: 32px;
 }
 
@@ -328,7 +334,8 @@ a:hover {
 
 .offcanvas-collapse {
 	position: fixed;
-	top: 3.25rem; /* adjusts the height between the top of the page and the offcanvas menu */
+	top: 3.25rem;
+	/* adjusts the height between the top of the page and the offcanvas menu */
 	bottom: 0;
 	left: 100%;
 	width: 100%;
@@ -369,16 +376,17 @@ a:hover {
 
 /* Dropdown Menu */
 .navbar .dropdown .dropdown-menu {
-	animation: fadeDropdown 0.2s; /* required for the fade animation */
+	animation: fadeDropdown 0.2s;
+	/* required for the fade animation */
 }
 
 @keyframes fadeDropdown {
-    0% {
-        opacity: 0;
-    }
+	0% {
+		opacity: 0;
+	}
 
-    100% {
-        opacity: 1;
+	100% {
+		opacity: 1;
 	}
 }
 
@@ -411,6 +419,7 @@ a:hover {
 	border: none;
 	background-color: #efefef;
 }
+
 /* end of dropdown menu */
 
 .navbar .navbar-toggler {
@@ -448,7 +457,7 @@ a:hover {
 	opacity: 0.7;
 }
 
-.header div[class*="col"] {  
+.header div[class*="col"] {
 	/* selects all elements which have classes starting with col */
 	/* needed so that the absolute positioned decoration stays behind */
 	position: relative;
@@ -480,8 +489,8 @@ a:hover {
 /*     Statistics     */
 /**********************/
 .counter {
-	padding-top: 4.5rem;
-	padding-bottom: 5.5rem;
+	padding-top: 1.5rem;
+	padding-bottom: 0.5rem;
 	text-align: center;
 }
 
@@ -508,8 +517,8 @@ a:hover {
 /*     Introduction     */
 /************************/
 .basic-1 {
-	padding-top: 9.25rem;
-	padding-bottom: 8.75rem;
+	padding-top: 5.25rem;
+	padding-bottom: 4.75rem;
 }
 
 .basic-1 h2 {
@@ -522,8 +531,8 @@ a:hover {
 /*********************/
 .basic-2 {
 	position: relative;
-	padding-top: 9.5rem;
-	padding-bottom: 9.5rem;
+	padding-top: 5.5rem;
+	padding-bottom: 5.5rem;
 }
 
 .basic-2 .decoration-star {
@@ -534,7 +543,7 @@ a:hover {
 	opacity: 0.7;
 }
 
-.basic-2 div[class*="col"] {  
+.basic-2 div[class*="col"] {
 	/* selects all elements which have classes starting with col */
 	/* needed so that the absolute positioned decoration stays behind */
 	position: relative;
@@ -602,7 +611,7 @@ a:hover {
 	margin-right: 1.5rem;
 	margin-bottom: 3.75rem;
 	margin-left: 1.5rem;
-	width: 150px;
+	width: 50%;
 	border: none;
 	background-color: transparent;
 	text-align: center;
@@ -610,8 +619,8 @@ a:hover {
 }
 
 .cards-1 .card-icon {
-	width: 90px;
-	height: 90px;
+	width: 50%;
+	height: auto;
 	margin-right: auto;
 	margin-bottom: 1.5rem;
 	margin-left: auto;
@@ -622,7 +631,6 @@ a:hover {
 
 .cards-1 .card-icon .far,
 .cards-1 .card-icon .fas {
-	margin-left: 2rem;
 	color: #cc2973;
 	font-size: 3.75rem;
 }
@@ -633,6 +641,10 @@ a:hover {
 
 .cards-1 .card-title {
 	font-weight: 600;
+	/* my code */
+	word-break: keep-all;
+	white-space: nowrap;
+	/*  */
 }
 
 
@@ -642,8 +654,8 @@ a:hover {
 .basic-3 {
 	position: relative;
 	overflow: hidden;
-	padding-top: 9.5rem;
-	padding-bottom: 9.75rem;
+	padding-top: 5.5rem;
+	padding-bottom: 5.75rem;
 }
 
 .basic-3 .decoration-star {
@@ -654,7 +666,7 @@ a:hover {
 	opacity: 0.7;
 }
 
-.basic-3 div[class*="col"] {  
+.basic-3 div[class*="col"] {
 	/* selects all elements which have classes starting with col */
 	/* needed so that the absolute positioned decoration stays behind */
 	position: relative;
@@ -677,8 +689,8 @@ a:hover {
 /*     Invitation     */
 /**********************/
 .basic-4 {
-	padding-top: 9.25rem;
-	padding-bottom: 9.75rem;
+	padding-top: 5.25rem;
+	padding-bottom: 5.75rem;
 	text-align: center;
 }
 
@@ -701,7 +713,7 @@ a:hover {
 }
 
 .cards-2 .card {
-	max-width: 350px;
+	max-width: 90%;
 	margin-right: auto;
 	margin-bottom: 4.5rem;
 	margin-left: auto;
@@ -809,7 +821,7 @@ a:hover {
 	opacity: 0.7;
 }
 
-.form-1 div[class*="col"] {  
+.form-1 div[class*="col"] {
 	/* selects all elements which have classes starting with col */
 	/* needed so that the absolute positioned decoration stays behind */
 	position: relative;
@@ -901,18 +913,18 @@ a:hover {
 /*     Back To Top Button     */
 /******************************/
 #myBtn {
-	position: fixed; 
-  	z-index: 99; 
-	bottom: 20px; 
-	right: 20px; 
-	display: none; 
+	position: fixed;
+	z-index: 99;
+	bottom: 20px;
+	right: 20px;
+	display: none;
 	width: 52px;
 	height: 52px;
-	border: none; 
-	border-radius: 50%; 
-	outline: none; 
-	background-color: #44434a; 
-	cursor: pointer; 
+	border: none;
+	border-radius: 50%;
+	outline: none;
+	background-color: #44434a;
+	cursor: pointer;
 }
 
 #myBtn:hover {
@@ -981,7 +993,7 @@ a:hover {
 
 /*************************/
 /*     Media Queries     */
-/*************************/	
+/*************************/
 /* Min-width 768px */
 @media (min-width: 768px) {
 
@@ -996,12 +1008,13 @@ a:hover {
 		left: -150px;
 		width: 300px;
 	}
-	
+
 	.header .decoration-star-2 {
 		top: 140px;
 		right: -200px;
 		width: 400px;
 	}
+
 	/* end of header */
 
 
@@ -1012,6 +1025,7 @@ a:hover {
 		margin-left: 1.5rem;
 		vertical-align: top;
 	}
+
 	/* end of statistics */
 
 
@@ -1020,6 +1034,7 @@ a:hover {
 		margin-right: 2rem;
 		margin-left: 2rem;
 	}
+
 	/* end of services */
 
 
@@ -1028,11 +1043,12 @@ a:hover {
 		left: -150px;
 		width: 300px;
 	}
-	
+
 	.form-1 .decoration-star-2 {
 		right: -200px;
 		width: 400px;
 	}
+
 	/* end of contact */
 
 
@@ -1040,14 +1056,16 @@ a:hover {
 	.ex-basic-1 .text-box {
 		padding: 1.75rem 2rem 0.875rem 2rem;
 	}
+
 	/* end of extra pages */
 }
+
 /* end of min-width 768px */
 
 
 /* Min-width 992px */
 @media (min-width: 992px) {
-	
+
 	/* General Styles */
 	.h2-heading {
 		width: 35.25rem;
@@ -1060,6 +1078,7 @@ a:hover {
 		margin-right: auto;
 		margin-left: auto;
 	}
+
 	/* end of general styles */
 
 
@@ -1104,7 +1123,7 @@ a:hover {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
-	
+
 	.navbar .nav-item .nav-link {
 		padding-right: 0.75rem;
 		padding-left: 0.75rem;
@@ -1124,6 +1143,7 @@ a:hover {
 		margin-top: 0;
 		margin-left: 1rem;
 	}
+
 	/* end of navigation */
 
 
@@ -1145,10 +1165,11 @@ a:hover {
 		margin-right: 0;
 		margin-left: 0;
 	}
-	
+
 	.header .btn-solid-lg {
 		margin-right: 0.5rem;
 	}
+
 	/* end of header */
 
 
@@ -1157,6 +1178,7 @@ a:hover {
 		font-size: 6rem;
 		line-height: 4rem;
 	}
+
 	/* end of statistics */
 
 
@@ -1164,6 +1186,7 @@ a:hover {
 	.basic-1 h2 {
 		width: 90%;
 	}
+
 	/* end of introduction */
 
 
@@ -1177,6 +1200,7 @@ a:hover {
 	.basic-2 .image-container {
 		margin-bottom: 0;
 	}
+
 	/* end of details 1 */
 
 
@@ -1184,6 +1208,7 @@ a:hover {
 	.cards-1 .text-container {
 		margin-bottom: 0;
 	}
+
 	/* end of services */
 
 
@@ -1197,6 +1222,7 @@ a:hover {
 	.basic-3 .image-container {
 		text-align: right;
 	}
+
 	/* end of details 2 */
 
 
@@ -1206,6 +1232,7 @@ a:hover {
 		margin-right: auto;
 		margin-left: auto;
 	}
+
 	/* end of invitation */
 
 
@@ -1216,11 +1243,12 @@ a:hover {
 		max-width: 100%;
 		vertical-align: top;
 	}
-	
+
 	.cards-2 .card:nth-of-type(3n+2) {
 		margin-right: 1.5rem;
 		margin-left: 1.5rem;
 	}
+
 	/* end of projects */
 
 
@@ -1232,7 +1260,7 @@ a:hover {
 	.form-1 .decoration-star {
 		top: 260px;
 	}
-	
+
 	.form-1 .decoration-star-2 {
 		top: 240px;
 	}
@@ -1240,6 +1268,7 @@ a:hover {
 	.form-1 .image-container {
 		margin-bottom: 0;
 	}
+
 	/* end of contact */
 
 
@@ -1254,14 +1283,14 @@ a:hover {
 		margin-right: 1.75rem;
 		vertical-align: top;
 	}
-	
+
 	.footer .footer-col.second {
 		display: inline-block;
 		width: 320px;
 		margin-right: 1.75rem;
 		vertical-align: top;
 	}
-	
+
 	.footer .footer-col.third {
 		display: inline-block;
 		width: 224px;
@@ -1273,6 +1302,7 @@ a:hover {
 		margin-right: 0;
 		margin-left: 0.375rem;
 	}
+
 	/* end of footer */
 
 
@@ -1287,20 +1317,23 @@ a:hover {
 		margin-right: 1rem;
 		margin-left: 1rem;
 	}
+
 	/* end of extra pages */
 }
+
 /* end of min-width 992px */
 
 
 /* Min-width 1200px */
 @media (min-width: 1200px) {
-	
+
 	/* General Styles */
 	.container {
 		max-width: 1140px;
 	}
+
 	/* end of general styles */
-	
+
 
 	/* Header */
 	.header {
@@ -1317,7 +1350,7 @@ a:hover {
 		left: -200px;
 		width: 500px;
 	}
-	
+
 	.header .decoration-star-2 {
 		top: 150px;
 		right: -200px;
@@ -1332,6 +1365,7 @@ a:hover {
 	.header .image-container {
 		text-align: right;
 	}
+
 	/* end of header */
 
 
@@ -1341,7 +1375,7 @@ a:hover {
 		margin-left: 3.5rem;
 		width: 180px;
 	}
-	
+
 	.counter .counter-cell:first-of-type {
 		margin-left: 0;
 	}
@@ -1354,6 +1388,7 @@ a:hover {
 		font-size: 6.75rem;
 		line-height: 4.5rem;
 	}
+
 	/* end of statistics */
 
 
@@ -1372,6 +1407,7 @@ a:hover {
 	.basic-2 h2 {
 		width: 90%;
 	}
+
 	/* end of details 1 */
 
 
@@ -1389,10 +1425,11 @@ a:hover {
 	.cards-1 .card:nth-of-type(3n+1) {
 		margin-left: 0;
 	}
-	
+
 	.cards-1 .card:nth-of-type(3n+3) {
 		margin-right: 0;
 	}
+
 	/* end of services */
 
 
@@ -1411,6 +1448,7 @@ a:hover {
 	.basic-3 h2 {
 		width: 95%;
 	}
+
 	/* end of details 2 */
 
 
@@ -1423,6 +1461,7 @@ a:hover {
 		margin-right: 1.625rem;
 		margin-left: 1.625rem;
 	}
+
 	/* end of projects */
 
 
@@ -1437,6 +1476,7 @@ a:hover {
 		margin-right: auto;
 		margin-left: auto;
 	}
+
 	/* end of testimonials */
 
 
@@ -1446,7 +1486,7 @@ a:hover {
 		left: -300px;
 		width: 600px;
 	}
-	
+
 	.form-1 .decoration-star-2 {
 		top: 140px;
 		right: -300px;
@@ -1460,6 +1500,7 @@ a:hover {
 	.form-1 h2 {
 		width: 82%;
 	}
+
 	/* end of contact */
 
 
@@ -1468,14 +1509,15 @@ a:hover {
 		width: 352px;
 		margin-right: 6rem;
 	}
-	
+
 	.footer .footer-col.second {
 		margin-right: 6.5rem;
 	}
-	
+
 	.footer .footer-col.third {
 		text-align: right;
 	}
+
 	/* end of footer */
 
 
@@ -1488,14 +1530,16 @@ a:hover {
 		margin-right: 2.875rem;
 		margin-left: 2.875rem;
 	}
+
 	/* end of extra pages */
 }
+
 /* end of min-width 1200px */
 
 
 /* Min-width 1400px */
 @media (min-width: 1400px) {
-	
+
 	/* Header */
 	/*.header .decoration-star {
 		top: 120px;
@@ -1509,11 +1553,26 @@ a:hover {
 		width: 700px;
 	}*/
 	/* end of header */
-	
+
 }
+
 /* end of min-width 1400px */
 
 /* my code */
-.hover:hover{
+.hover:hover {
 	cursor: pointer;
+}
+
+.grid-2x {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.grid-3x {
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+.image-container {
+	text-align: center;
 }

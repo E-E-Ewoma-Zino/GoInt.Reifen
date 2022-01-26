@@ -16,11 +16,13 @@
 							<p class="p-large">
 								<%= page.header_text %>
 							</p>
-							<a class="btn-solid-lg" href="#introduction">More details</a>
-							<a class="btn-outline-lg" href="#contact">Contact us</a>
+							<div class="d-flex justify-content-between align-items-center">
+								<a class="btn-solid-lg w-50" href="#introduction">More</a>
+								<a class="btn-outline-lg w-50" href="#contact">Contact</a>
+							</div>
 						</div> <!-- end of text-container -->
 					</div> <!-- end of col -->
-					<div class="col-lg-5 col-xl-7">
+					<div class="col-lg-5 col-xl-7 d-none d-lg-block">
 						<div class="image-container">
 							<img class="img-fluid" src="/home/images/tire3.jpg" style="width: 75%;border-radius: 5%; border-top-left-radius: 40%;" alt="alternative">
 						</div> <!-- end of image-container -->
@@ -61,7 +63,7 @@
 				<div id="services" class="cards-1 bg-gray">
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-5">
+							<div class="col-md-5">
 								<div class="text-container">
 									<h2>
 										<%= page.services_title %>
@@ -71,8 +73,8 @@
 									</p>
 								</div> <!-- end of text-container -->
 							</div> <!-- end of col -->
-							<div class="col-lg-7">
-								<div class="card-container">
+							<div class="col-md-7">
+								<div class="card-container grid-lg-3x grid-2x">
 
 									<!-- Card -->
 									<div class="card">
