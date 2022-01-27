@@ -8,7 +8,7 @@ module.exports = (req, res)=>{
 			return error500(req, res);
 		}else if (page){
 			res.render("home/services",{
-				title: page.services_title,
+				title: page.services_page_title,
 				page: page
 			});
 		}else{

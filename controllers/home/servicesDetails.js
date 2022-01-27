@@ -4,15 +4,18 @@ const error500 = require("../errors/error500");
 
 module.exports = {
 	get: (req, res)=>{
-		console.log(req.params)
+		console.log(req.params);
+		const title = req.params.title.toLowerCase();
+
 		page.getPage((getPage_err, page)=>{
 			if(getPage_err){
 				return error500(req, res);
 			}else if (page){
 				res.render("home/servicesDetails",{
-					title: page.services_title,
+					title: page.services_details[title].title,
+					service: page.services_details[title],
 					page: page,
-					type: req.params.title
+					type: title
 				});
 			}else{
 				return error500(req, res);

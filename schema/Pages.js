@@ -31,6 +31,13 @@ const pageSchema = mongoose.Schema({
 	services_title: String,
 	services_text: String,
 
+	// services page
+	services_page_title: String,
+	services_page_body: Array,
+	
+	// services details
+	services_details: Object,
+
 	// aboutUs page
 	aboutUs_page_title: String,
 	aboutUs_title: String,

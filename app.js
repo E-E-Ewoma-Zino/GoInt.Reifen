@@ -75,7 +75,7 @@ app.use("/store", require(__dirname + "/router/store"));
 // @route	/admin
 app.use("/admin", require(__dirname + "/router/admin"));
 // @desc	404 Page
-// app.use(require(__dirname + "/controllers/errors/error404"));
+app.use(require(__dirname + "/controllers/errors/error404"));
 
 const port = process.env.PORT || 5002;
 app.listen(port, ()=> console.log("started app at port", port));

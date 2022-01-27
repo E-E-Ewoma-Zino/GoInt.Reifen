@@ -51,10 +51,17 @@ class Page {
 						introduction_title: require("../pages/index").introduction.title,
 						introduction_text: require("../pages/index").introduction.text,
 
-						// services page
+						// services index page
 						services_title: require("../pages/index").services.title,
 						services_text: require("../pages/index").services.text,
 						services_home_body: require("../pages/index").services.body,
+						services_details: require("../pages/servicesDetails"),
+
+						// sercices page
+						services_page_title: require("../pages/services").title,
+						services_page_body: require("../pages/services").body,
+
+						// about page
 						aboutUs_title: require("../pages/aboutUs").title,
 						aboutUs_header: require("../pages/aboutUs").header,
 						aboutUs_body: require("../pages/aboutUs").body,

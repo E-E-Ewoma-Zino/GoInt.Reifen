@@ -1,0 +1,38 @@
+{
+	"repairing": {
+		"title": "Repairing",
+		"topic": "Tire Repair",
+		"img": "/home/images/tire6.jpg",
+		"body": [
+			"Go Int. Reifen and More is keen to provide you with the best of services ranging from repairing worn-out tires to selling brand new ones. We also export tires out of the country and if we export, that means we also import tires into the country as well.",
+			"Our main priority is to ensure that when you are out on the roads driving, you are doing it with the best quality of tires. Your safety is our number 1 priority."
+		]
+	},
+	"exporting": {
+		"title": "Exporting",
+		"topic": "Exporting Tires out of the country",
+		"img": "/home/images/tire10.jpg",
+		"body": [
+			"Go Int. Reifen and More is keen to provide you with the best of services ranging from repairing worn-out tires to selling brand new ones. We also export tires out of the country and if we export, that means we also import tires into the country as well.",
+			"Our main priority is to ensure that when you are out on the roads driving, you are doing it with the best quality of tires. Your safety is our number 1 priority."
+		]
+	},
+	"importing": {
+		"title": "Importing",
+		"topic": "Tire Importation",
+		"img": "/home/images/tire12.jpg",
+		"body": [
+			"Go Int. Reifen and More is keen to provide you with the best of services ranging from repairing worn-out tires to selling brand new ones. We also export tires out of the country and if we export, that means we also import tires into the country as well.",
+			"Our main priority is to ensure that when you are out on the roads driving, you are doing it with the best quality of tires. Your safety is our number 1 priority."
+		]
+	},
+	"recycling": {
+		"title": "Recycling",
+		"topic": "Reclycling Worn-Out Tires",
+		"img": "/home/images/tire11.jpg",
+		"body": [
+			"Go Int. Reifen and More is keen to provide you with the best of services ranging from repairing worn-out tires to selling brand new ones. We also export tires out of the country and if we export that means we also import tires into the country as well.",
+			"Our main priority is to ensure that when you are out on the roads driving, you are doing it with the best quality of tires. Your safety is our number 1 priority."
+		]
+	}
+}

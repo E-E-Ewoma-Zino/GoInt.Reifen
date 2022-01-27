@@ -7,7 +7,7 @@
 				<div class="row">
 					<div class="col-xl-10 offset-xl-1">
 						<h1>
-							Our Services
+							<%= page.services_page_title %> 
 						</h1>
 					</div> <!-- end of col -->
 				</div> <!-- end of row -->
@@ -19,8 +19,31 @@
 		<div class="ex-basic-1 pt-5 pb-5">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12">
-						<img class="img-fluid mt-5 mb-3" src="/home/images/article-details-large.jpg" alt="alternative">
+					<div class="col-lg-12 d-flex justify-content-center align-items-center">
+						<img class="img-fluid rounded-3 mt-5 w-100 mb-3" src="/home/images/tire6.jpg" alt="alternative">
+					</div> <!-- end of col -->
+				</div> <!-- end of row -->
+			</div> <!-- end of container -->
+		</div> <!-- end of ex-basic-1 -->
+		<!-- end of basic -->
+
+		<!-- Basic -->
+		<div class="ex-basic-1 pt-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-10 offset-xl-1">
+						<p><%= page.services_page_body[0] %></p>
+						<p class="mb-5"><%= page.services_page_body[1] %></p>
+
+						<h2 class="mb-3">
+							<%= page.aboutUs_whyUs_title %>
+						</h2>
+						<p>
+							<%= page.aboutUs_whyUs_body[0] %>
+						</p>
+						<p class="mb-4">
+							<%= page.aboutUs_whyUs_body[1] %>
+						</p>
 					</div> <!-- end of col -->
 				</div> <!-- end of row -->
 			</div> <!-- end of container -->
@@ -46,7 +69,7 @@
 										<span class="fa-stack-1x">1</span>
 									</span>
 									<div class="flex-grow-1">
-										<img class="img-fluid" src="/home/images/article-details-large.jpg" alt="<%= page.services_home_body[0] %>">
+										<img class="img-fluid rounded-pill" src="/home/images/tire6.jpg" alt="<%= page.services_home_body[0] %>">
 										<h5><%= page.services_home_body[0] %></h5>
 										<p><%= page.aboutUs_body_services[0] %></p>
 									</div>
@@ -64,7 +87,7 @@
 										<span class="fa-stack-1x">2</span>
 									</span>
 									<div class="flex-grow-1">
-										<img class="img-fluid" src="/home/images/article-details-large.jpg" alt="<%= page.services_home_body[1] %>">
+										<img class="img-fluid rounded-pill" src="/home/images/tire12.jpg" alt="<%= page.services_home_body[1] %>">
 										<h5><%= page.services_home_body[1] %></h5>
 										<p><%= page.aboutUs_body_services[1] %></p>
 									</div>
@@ -82,7 +105,7 @@
 										<span class="fa-stack-1x">3</span>
 									</span>
 									<div class="flex-grow-1">
-										<img class="img-fluid" src="/home/images/article-details-large.jpg" alt="<%= page.services_home_body[2] %>">
+										<img class="img-fluid rounded-pill" src="/home/images/tire10.jpg" alt="<%= page.services_home_body[2] %>">
 										<h5><%= page.services_home_body[2] %></h5>
 										<p><%= page.aboutUs_body_services[2] %></p>
 									</div>
@@ -104,7 +127,7 @@
 					<div class="col-lg-12">
 
 						<!-- Card -->
-						<div class="card hover" onclick="link({ url: 'services/<%= page.services_home_body[3] %>', name: '<%= page.services_home_body[3] %>', target: '' })">
+						<div class="card hover" onclick="link({ url: '/store', name: '<%= page.services_home_body[3] %>', target: '' })">
 							<ul class="list-unstyled">
 								<li class="d-flex">
 									<span class="fa-stack">
@@ -112,7 +135,7 @@
 										<span class="fa-stack-1x">4</span>
 									</span>
 									<div class="flex-grow-1">
-										<img class="img-fluid" src="/home/images/article-details-large.jpg" alt="<%= page.services_home_body[3] %>">
+										<img class="img-fluid rounded-pill" src="/home/images/tire13.jpg" alt="<%= page.services_home_body[3] %>">
 										<h5><%= page.services_home_body[3] %></h5>
 										<p><%= page.aboutUs_body_services[3] %></p>
 									</div>
@@ -122,7 +145,7 @@
 						<!-- end of card -->
 
 						<!-- Card -->
-						<div class="card hover" onclick="link({ url: 'services/<%= page.services_home_body[4] %>', name: '<%= page.services_home_body[4] %>', target: '' })">
+						<!-- <div class="card hover" onclick="link({ url: 'services/<%# page.services_home_body[4] %>', name: '<%#page.services_home_body[4] %>', target: '' })">
 							<ul class="list-unstyled">
 								<li class="d-flex">
 									<span class="fa-stack">
@@ -130,13 +153,13 @@
 										<span class="fa-stack-1x">5</span>
 									</span>
 									<div class="flex-grow-1">
-										<img class="img-fluid" src="/home/images/article-details-large.jpg" alt="<%= page.services_home_body[4] %>">
-										<h5><%= page.services_home_body[4] %></h5>
-										<p><%= page.aboutUs_body_services[4] %></p>
+										<img class="img-fluid rounded-pill" src="/home/images/article-details-large.jpg" alt="<%# page.services_home_body[4] %>">
+										<h5><%# page.services_home_body[4] %></h5>
+										<p><%# page.aboutUs_body_services[4] %></p>
 									</div>
 								</li>
 							</ul>
-						</div> <!-- end of card -->
+						</div> end of card -->
 						<!-- end of card -->
 
 						<!-- Card -->
@@ -145,10 +168,10 @@
 								<li class="d-flex">
 									<span class="fa-stack">
 										<span class="fas fa-circle fa-stack-2x"></span>
-										<span class="fa-stack-1x">6</span>
+										<span class="fa-stack-1x">5</span>
 									</span>
 									<div class="flex-grow-1">
-										<img class="img-fluid" src="/home/images/article-details-large.jpg" alt="<%= page.services_home_body[5] %>">
+										<img class="img-fluid rounded-pill" src="/home/images/tire11.jpg" alt="<%= page.services_home_body[5] %>">
 										<h5><%= page.services_home_body[5] %></h5>
 										<p><%= page.aboutUs_body_services[5] %></p>
 									</div>

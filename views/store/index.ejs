@@ -94,7 +94,9 @@
 										</div>
 										<ul class="product-controls">
 											<li data-filter="*">All</li>
-											<li data-filter=".dresses">Dresses</li>
+											<% categories.forEach(category => { %>
+												<li style="text-transform: capitalize;" data-filter="<%= "." + category.name.toLowerCase() %>"><%= category.name %></li>
+											<% }); %>
 											<li data-filter=".bags">Bags</li>
 											<li data-filter=".shoes">Shoes</li>
 											<li data-filter=".accesories">Accesories</li>
@@ -115,6 +117,20 @@
 										</div>
 									</div>
 								</div>
+								<% products.forEach(product => { %>
+									<div class="col-lg-3 col-sm-6 mix all <%= (product.categories.map(category => category.name)).toString().replace(/,/g, " ") %>">
+										<div class="single-product-item">
+											<figure>
+												<a href="#"><img src="/<%= product.img[0].path %>" alt="<%= product.name %>"></a>
+												<div class="p-status">new</div>
+											</figure>
+											<div class="product-text">
+												<h6><%= product.name %></h6>
+												<p>$<%= product.price %></p>
+											</div>
+										</div>
+									</div>
+								<% }); %>
 								<div class="col-lg-3 col-sm-6 mix all dresses bags">
 									<div class="single-product-item">
 										<figure>

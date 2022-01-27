@@ -1,6 +1,56 @@
 <%- include("components/_head") %>
 	<%- include("components/_navbar") %>
 
+	<!-- Header -->
+	<header class="ex-header bg-gray">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-10 offset-xl-1">
+					<h1>
+						<%= service.topic %> 
+					</h1>
+				</div> <!-- end of col -->
+			</div> <!-- end of row -->
+		</div> <!-- end of container -->
+	</header> <!-- end of ex-header -->
+	<!-- end of header -->
+
+	<!-- Basic -->
+	<div class="ex-basic-1 pt-5 pb-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 d-flex justify-content-center align-items-center">
+					<img class="img-fluid rounded-3 mt-5 w-100 mb-3" src="<%= service.img %>" alt="alternative">
+				</div> <!-- end of col -->
+			</div> <!-- end of row -->
+		</div> <!-- end of container -->
+	</div> <!-- end of ex-basic-1 -->
+	<!-- end of basic -->
+
+	<!-- Basic -->
+	<div class="ex-basic-1 pt-4">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-10 offset-xl-1">
+					<p><%= service.body[0] %></p>
+					<p class="mb-5"><%= service.body[1] %></p>
+
+					<h2 class="mb-3">
+							<%= page.aboutUs_whyUs_title %>
+						</h2>
+						<p>
+							<%= page.aboutUs_whyUs_body[0] %>
+						</p>
+						<p class="mb-4">
+							<%= page.aboutUs_whyUs_body[1] %>
+						</p>
+				</div> <!-- end of col -->
+			</div> <!-- end of row -->
+		</div> <!-- end of container -->
+	</div> <!-- end of ex-basic-1 -->
+	<!-- end of basic -->
+
+
 			<!-- Contact -->
 	<div id="contact" class="form-1">
 		<img class="decoration-star" src="/home/images/decoration-star.svg" alt="alternative">
@@ -14,7 +64,7 @@
 				</div> <!-- end of col -->
 				<div class="col-lg-6">
 					<div class="text-container">
-						<h2>To &quot;<%= type %>&quot;, make a requst using the form</h2>
+						<h2>Make your requst using the form</h2>
 						<!-- Contact Form -->
 						<form action="/services/<%= type %>" method="POST">
 							<div class="form-group">
@@ -42,7 +92,7 @@
 	<!-- end of contact -->
 
 
-			<%- include("utils/testimonials") %>
+	<%- include("utils/testimonials") %>
 
 <!-- components -->
 	<%- include("components/_footer") %>
