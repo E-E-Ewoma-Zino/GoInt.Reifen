@@ -5,7 +5,7 @@ const error500 = require("../errors/error500");
 
 module.exports = {
 	get: (req, res)=>{
-		product.findAndPopulate((findProduct_err, allProducts)=>{
+		product.findAndPopulate("categories", (findProduct_err, allProducts)=>{
 			if(findProduct_err){
 				return error500(req, res);
 			}else if (allProducts){

@@ -31,7 +31,7 @@ router.get("/logOut", getUser, (req, res) => auth.logOut(req, res));
 router.get("/home", getUser, (req, res) => home.get(req, res));
 
 // @desc	Categories Router
-router.get("/categories", getUser, userOnly, (req, res) => categories.get(req, res));
+router.get("/categories", getUser, (req, res) => categories.get(req, res));
 
 // @desc	Contact Router
 router.get("/contact", getUser, (req, res) => contact.get(req, res));
@@ -40,7 +40,7 @@ router.get("/contact", getUser, (req, res) => contact.get(req, res));
 router.get("/shopping-cart", getUser, (req, res) => shoppingCart.get(req, res));
 
 // @desc	product-page Router
-router.get("/product-page", getUser, (req, res) => productPage.get(req, res));
+router.get("/categories/:product", getUser, (req, res) => productPage.get(req, res));
 
 // @desc	check-out Router
 router.get("/check-out", getUser, (req, res) => checkOut.get(req, res));

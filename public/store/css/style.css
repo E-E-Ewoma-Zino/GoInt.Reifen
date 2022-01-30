@@ -92,6 +92,42 @@
 	box-shadow: 3px 4px 17px 3px rgb(114 100 100);
 }
 
+.tire-circle{
+    position: absolute;
+	top: -7%;
+    right: -1%;
+    width: 20vmin;
+    height: 20vmin;
+	border-radius: 50%;
+	background-color: black;
+}
+
+.swing{
+	transform: rotateZ(360deg);
+	animation: rotate 3s ease;
+	animation-iteration-count: infinite;
+}
+@keyframes rotate {
+	0%{
+		transform: rotateZ(360deg);
+	}
+	50%{
+		transform: rotateZ(355deg);
+	}
+	100%{
+		transform: rotateZ(360deg);
+	}
+}
+
+.make-box-text-smaller{
+	transform: scale(0.7) translate(45px, -31px);
+}
+
+@media only screen and (min-width: 425px){
+	.make-box-text-smaller{
+		transform: none;
+	}
+}
 /*  */
 
 html,
@@ -678,12 +714,12 @@ ol {
 
 .features-box .single-box-item.first-box .box-text {
 	position: absolute;
-	right: 60px;
-	top: 106px;
+	right: 24px;
+    top: 35px;
 }
 
 .features-box .single-box-item.first-box .box-text .trend-alert {
-	color: #1e1e1e;
+	color: #ffffff;
 	display: block;
 	font-size: 22px;
 	font-family: "FuturaBT-Book";
@@ -714,7 +750,7 @@ ol {
 }
 
 .features-box .single-box-item.second-box .box-text .trend-alert {
-	color: #5b5b5b;
+	color: #ffffff;
 	display: inline-block;
 	font-size: 16px;
 	font-family: "FuturaBT-Book";
@@ -741,7 +777,7 @@ ol {
 }
 
 .features-box .single-box-item.large-box .box-text .trend-alert {
-	color: #5b5b5b;
+	color: #ffffff;
 	display: inline-block;
 	font-size: 22px;
 	font-family: "FuturaBT-Book";

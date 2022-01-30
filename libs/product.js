@@ -7,19 +7,6 @@ class Product extends edit {
 		super(schema);
 	}
 
-	// find all the itema of a specific schema
-	findAndPopulate(callback) {
-		this.schema.find({}).populate("categories").exec((err, schemaItem) => {
-			if (err) {
-				return callback(err, null);
-			} else if (schemaItem) {
-				return callback(null, schemaItem);
-			} else {
-				return callback(null, null);
-			}
-		});
-	}
-
 	addCategory({productId: pId, categoryId: cId}, callback){
 		this.findById(pId, (findProduct_err, foundProduct)=>{
 			if(findProduct_err){

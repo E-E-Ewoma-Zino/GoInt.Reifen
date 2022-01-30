@@ -1,313 +1,214 @@
 <%- include("components/_head") %>
-	<%- include("utils/preloader") %>
-		<%- include("utils/searchModel") %>
-			<%- include("components/_navbar") %>
+<%- include("utils/preloader") %>
+<%- include("utils/searchModel") %>
+<%- include("components/_navbar") %>
 
-				<!-- Page Add Section Begin -->
-				<section class="page-add">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-4">
-								<div class="page-breadcrumb">
-									<h2>Dresses<span>.</span></h2>
-									<a href="#">Home</a>
-									<a href="#">Dresses</a>
-									<a class="active" href="#">Night Dresses</a>
-								</div>
-							</div>
-							<div class="col-lg-8">
-								<img src="img/add.jpg" alt="">
+<%# declear a counter variable to use in displaying all products %>
+<% let counter = 0; %>
+<%# this is the number of times a loop is allowed to run %>
+<% let loopCounter = 4; %>
+<%# this is used to count the loop %>
+<% let loopIndex = 0; %>
+
+<!-- Page Add Section Begin -->
+<section class="page-add">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="page-breadcrumb">
+					<h2>Dresses<span>.</span></h2>
+					<a href="#">Home</a>
+					<a href="#">Dresses</a>
+					<a class="active" href="#">Night Dresses</a>
+				</div>
+			</div>
+			<div class="col-lg-8">
+				<img src="img/add.jpg" alt="">
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Page Add Section End -->
+
+<!-- Categories Page Section Begin -->
+<section class="categories-page spad">
+	<div class="container">
+		<div class="categories-controls">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="categories-filter">
+						<div class="cf-left">
+							<form action="#">
+								<select class="sort">
+									<option value="">Sort by</option>
+									<option value="">Orders</option>
+									<option value="">Newest</option>
+									<option value="">Price</option>
+								</select>
+							</form>
+						</div>
+						<div class="cf-right">
+							<span><%= products.length %> Products</span>
+							<a href="#x">2</a>
+							<a href="#x" class="active">4</a>
+							<a href="#x">6</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<% do{ %>
+		<div class="row product-row">
+			<div class="col-lg-6 col-md-6">
+				<div class="single-product-item">
+					<figure style="cursor: pointer" onclick="linkBtn('/store/categories/<%= products[counter].name %>?q=<%= products[counter].id %>')">
+							<img src="/<%= products[counter].img[0].path %>" alt="<%= products[counter].name %>">
+						<div class="p-status">new</div>
+					</figure>
+					<div class="product-text">
+						<a onclick="linkBtn('/store/categories/<%= products[counter].name %>?q=<%= products[counter].id %>')">
+							<h6><%= products[counter].name %></h6>
+						</a>
+						<p>$<%= products[counter].price %></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<div class="row">
+					<% for (counter = counter + 1, loopIndex = 0; counter < products.length; counter++) { %>
+					<% const product = products[counter]; %>
+
+					<% loopIndex++; %>
+					<% if(loopIndex > loopCounter) break; %>
+					<div class="col-lg-6 col-md-6">
+						<div class="single-product-item">
+							<figure style="cursor: pointer" onclick="linkBtn('/store/categories/<%= product.name %>?q=<%= product.id %>')">
+									<img src="/<%= product.img[0].path %>" alt="<%= product.name %>">
+								<div class="p-status">new</div>
+							</figure>
+							<div class="product-text">
+								<a onclick="linkBtn('/store/categories/<%= product.name %>?q=<%= product.id %>')">
+									<h6><%= product.name %></h6>
+								</a>
+								<p>$<%= product.price %></p>
 							</div>
 						</div>
 					</div>
-				</section>
-				<!-- Page Add Section End -->
+					<% } %>
+				</div>
+			</div>
+			<% for (counter, loopIndex = 0; counter < products.length; counter++) { %>
+			<% const product = products[counter]; %>
 
-				<!-- Categories Page Section Begin -->
-				<section class="categories-page spad">
-					<div class="container">
-						<div class="categories-controls">
-							<div class="row">
-								<div class="col-lg-12">
-									<div class="categories-filter">
-										<div class="cf-left">
-											<form action="#">
-												<select class="sort">
-													<option value="">Sort by</option>
-													<option value="">Orders</option>
-													<option value="">Newest</option>
-													<option value="">Price</option>
-												</select>
-											</form>
-										</div>
-										<div class="cf-right">
-											<span>20 Products</span>
-											<a href="#">2</a>
-											<a href="#" class="active">4</a>
-											<a href="#">6</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-6 col-md-6">
-								<div class="single-product-item">
-									<figure>
-										<img src="img/products/img-9.jpg" alt="">
-										<div class="p-status">new</div>
-										<div class="hover-icon">
-											<a href="img/products/img-9.jpg" class="pop-up"><img
-													src="img/icons/zoom-plus.png" alt=""></a>
-										</div>
-									</figure>
-									<div class="product-text">
-										<a href="#">
-											<h6>Green Dress with details</h6>
-										</a>
-										<p>$22.90</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6">
-								<div class="row">
-									<div class="col-lg-6 col-md-6">
-										<div class="single-product-item">
-											<figure>
-												<img src="img/products/img-2.jpg" alt="">
-												<div class="p-status sale">sale</div>
-											</figure>
-											<div class="product-text">
-												<a href="#">
-													<h6>Yellow Maxi Dress</h6>
-												</a>
-												<p>$25.90</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-6 col-md-6">
-										<div class="single-product-item">
-											<figure>
-												<img src="img/products/img-3.jpg" alt="">
-												<div class="p-status">new</div>
-												<div class="hover-icon">
-													<a href="img/products/img-3.jpg" class="pop-up"><img
-															src="img/icons/zoom-plus.png" alt=""></a>
-												</div>
-											</figure>
-											<div class="product-text">
-												<a href="#">
-													<h6>One piece bodysuit</h6>
-												</a>
-												<p>$19.90</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-6 col-md-6">
-										<div class="single-product-item">
-											<figure>
-												<img src="img/products/img-6.jpg" alt="">
-												<div class="p-status sale">sale</div>
-											</figure>
-											<div class="product-text">
-												<a href="#">
-													<h6>Yellow Maxi Dress</h6>
-												</a>
-												<p>$25.90</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-6 col-md-6">
-										<div class="single-product-item">
-											<figure>
-												<img src="img/products/img-1.jpg" alt="">
-												<div class="hover-icon">
-													<a href="img/products/img-1.jpg" class="pop-up"><img
-															src="img/icons/zoom-plus.png" alt=""></a>
-												</div>
-											</figure>
-											<div class="product-text">
-												<a href="#">
-													<h6>One piece bodysuit</h6>
-												</a>
-												<p>$19.90</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6">
-								<div class="single-product-item">
-									<figure>
-										<img src="img/products/img-5.jpg" alt="">
-										<div class="p-status">new</div>
-										<div class="hover-icon">
-											<a href="img/products/img-5.jpg" class="pop-up"><img
-													src="img/icons/zoom-plus.png" alt=""></a>
-										</div>
-									</figure>
-									<div class="product-text">
-										<a href="#">
-											<h6>Green Dress with details</h6>
-										</a>
-										<p>$22.90</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6">
-								<div class="single-product-item">
-									<figure>
-										<img src="img/products/img-4.jpg" alt="">
-										<div class="p-status popular">popular</div>
-										<div class="hover-icon">
-											<a href="img/products/img-4.jpg" class="pop-up"><img
-													src="img/icons/zoom-plus.png" alt=""></a>
-										</div>
-									</figure>
-									<div class="product-text">
-										<a href="#">
-											<h6>Blue Dress with details</h6>
-										</a>
-										<p>$35.50</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6">
-								<div class="single-product-item">
-									<figure>
-										<img src="img/products/img-8.jpg" alt="">
-										<div class="p-status popular">popular</div>
-										<div class="hover-icon">
-											<a href="img/products/img-8.jpg" class="pop-up"><img
-													src="img/icons/zoom-plus.png" alt=""></a>
-										</div>
-									</figure>
-									<div class="product-text">
-										<a href="#">
-											<h6>Blue Dress with details</h6>
-										</a>
-										<p>$35.50</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6">
-								<div class="single-product-item">
-									<figure>
-										<img src="img/products/img-10.jpg" alt="">
-										<div class="p-status popular">popular</div>
-										<div class="hover-icon">
-											<a href="img/products/img-10.jpg" class="pop-up"><img
-													src="img/icons/zoom-plus.png" alt=""></a>
-										</div>
-									</figure>
-									<div class="product-text">
-										<a href="#">
-											<h6>Blue Dress with details</h6>
-										</a>
-										<p>$35.50</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6">
-								<div class="row">
-									<div class="col-lg-6 col-md-6">
-										<div class="single-product-item">
-											<figure>
-												<img src="img/products/img-11.jpg" alt="">
-												<div class="p-status sale">sale</div>
-											</figure>
-											<div class="product-text">
-												<a href="#">
-													<h6>Yellow Maxi Dress</h6>
-												</a>
-												<p>$25.50</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-6 col-md-6">
-										<div class="single-product-item">
-											<figure>
-												<img src="img/products/img-12.jpg" alt="">
-												<div class="p-status">new</div>
-												<div class="hover-icon">
-													<a href="img/products/img-12.jpg" class="pop-up"><img
-															src="img/icons/zoom-plus.png" alt=""></a>
-												</div>
-											</figure>
-											<div class="product-text">
-												<a href="#">
-													<h6>One piece bodysuit</h6>
-												</a>
-												<p>$19.90</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-6 col-md-6">
-										<div class="single-product-item">
-											<figure>
-												<img src="img/products/img-14.jpg" alt="">
-												<div class="p-status sale">sale</div>
-											</figure>
-											<div class="product-text">
-												<a href="#">
-													<h6>Yellow Maxi Dress</h6>
-												</a>
-												<p>$25.90</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-6 col-md-6">
-										<div class="single-product-item">
-											<figure>
-												<img src="img/products/img-15.jpg" alt="">
-												<div class="hover-icon">
-													<a href="img/products/img-15.jpg" class="pop-up"><img
-															src="img/icons/zoom-plus.png" alt=""></a>
-												</div>
-											</figure>
-											<div class="product-text">
-												<a href="#">
-													<h6>One piece bodysuit</h6>
-												</a>
-												<p>$19.90</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6">
-								<div class="single-product-item">
-									<figure>
-										<img src="img/products/img-13.jpg" alt="">
-										<div class="p-status">new</div>
-										<div class="hover-icon">
-											<a href="img/products/img-13.jpg" class="pop-up"><img
-													src="img/icons/zoom-plus.png" alt=""></a>
-										</div>
-									</figure>
-									<div class="product-text">
-										<a href="#">
-											<h6>Green Dress with details</h6>
-										</a>
-										<p>$22.90</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="more-product">
-							<div class="row">
-								<div class="col-lg-12 text-center">
-									<a href="#" class="primary-btn">Load More</a>
-								</div>
+			<% loopIndex++; %>
+			<% if(loopIndex > loopCounter) break; %>
+			<div class="col-lg-3 col-md-6">
+				<div class="single-product-item">
+					<figure style="cursor: pointer" onclick="linkBtn('/store/categories/<%= product.name %>?q=<%= product.id %>')">
+							<img src="/<%= product.img[0].path %>" alt="<%= product.name %>">
+						<div class="p-status">new</div>
+					</figure>
+					<div class="product-text">
+						<a onclick="linkBtn('/store/categories/<%= product.name %>?q=<%= product.id %>')">
+							<h6><%= product.name %></h6>
+						</a>
+						<p>$<%= product.price %></p>
+					</div>
+				</div>
+			</div>
+			<% } %>
+			<div class="col-lg-6 col-md-6">
+				<div class="row">
+					<% for (counter, loopIndex = 0; counter < products.length; counter++) { %>
+					<% const product = products[counter]; %>
+
+					<% loopIndex++; %>
+					<% if(loopIndex > loopCounter) break; %>
+					<div class="col-lg-6 col-md-6">
+						<div class="single-product-item">
+							<figure style="cursor: pointer" onclick="linkBtn('/store/categories/<%= product.name %>?q=<%= product.id %>')">
+									<img src="/<%= product.img[0].path %>" alt="<%= product.name %>">
+								<div class="p-status">new</div>
+							</figure>
+							<div class="product-text">
+								<a onclick="linkBtn('/store/categories/<%= product.name %>?q=<%= product.id %>')">
+									<h6><%= product.name %></h6>
+								</a>
+								<p>$<%= product.price %></p>
 							</div>
 						</div>
 					</div>
-				</section>
-				<!-- Categories Page Section End -->
-				<%- include("components/_footer") %>
-					<%- include("components/_script") %>
+					<% } %>
+				</div>
+			</div>
+			<% if(counter < products.length){ %>
+			<div class="col-lg-6 col-md-6">
+				<div class="single-product-item">
+					<figure style="cursor: pointer" onclick="linkBtn('/store/categories/<%= products[counter].name %>?q=<%= products[counter].id %>')">
+							<img src="/<%= products[counter].img[0].path %>" alt="<%= products[counter].name %>">
+						<div class="p-status">new</div>
+					</figure>
+					<div class="product-text">
+						<a onclick="linkBtn('/store/categories/<%= products[counter].name %>?q=<%= products[counter].id %>')">
+							<h6><%= products[counter].name %></h6>
+						</a>
+						<p>$<%= products[counter].price %></p>
+					</div>
+				</div>
+			</div>
+			<% } %>
+		</div>
+		<% }while(counter < products.length) %>
+		<div class="more-product">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<button type="button" class="btn primary-btn load-more">Load More</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Categories Page Section End -->
+<%- include("components/_footer") %>
+<%- include("components/_script") %>
+
+<script>
+	const productRow = document.getElementsByClassName("product-row");
+	const loadMore = document.getElementsByClassName("load-more")[0];
+	let currentProduct = 0;
+
+	function hideAllProducts() {
+		for (let i = 0; i < productRow.length; i++) {
+			const row = productRow[i];
+			$(row).hide();
+		}
+	}
+
+	function showCurrent(current) {
+		$(productRow[current]).fadeIn(1000);
+	}
+
+	function hideProduct(previous) {
+		$(productRow[previous - 1]).fadeOut(4000);
+	}
+	// first hide all product row
+	hideAllProducts();
+
+	// show only first product row
+	showCurrent(currentProduct);
 
 
-						</body>
+	loadMore.addEventListener("click", (e) => {
+		// hideProduct(currentProduct);
+		++currentProduct;
 
-						</html>
+		showCurrent(currentProduct);
+		if (currentProduct >= productRow.length - 1) {
+			return $(e.target.parentElement.parentElement.parentElement).fadeOut();
+		};
+	});
+</script>
+
+</body>
+
+</html>

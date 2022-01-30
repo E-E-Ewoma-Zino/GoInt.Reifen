@@ -44,6 +44,32 @@ class Edit {
 		});
 	}
 
+	// find all the items of a specific schema
+	findAndPopulate(option, callback) {
+		this.schema.find({}).populate(option).exec((err, schemaItem) => {
+			if (err) {
+				return callback(err, null);
+			} else if (schemaItem) {
+				return callback(null, schemaItem);
+			} else {
+				return callback(null, null);
+			}
+		});
+	}
+
+	// find the item of a specific schema
+	findByIdAndPopulate(itemId, option, callback) {
+		this.schema.findById({_id: itemId}).populate(option).exec((err, schemaItem) => {
+			if (err) {
+				return callback(err, null);
+			} else if (schemaItem) {
+				return callback(null, schemaItem);
+			} else {
+				return callback(null, null);
+			}
+		});
+	}
+
 	// this would create an item in the specified schema that calls this
 	create(items, callback) {
 		this.schema.create(items, (err, done) => {

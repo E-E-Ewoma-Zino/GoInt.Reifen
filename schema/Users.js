@@ -10,6 +10,10 @@ const userSchema = mongoose.Schema({
 	lastname: String,
 	phoneNo: String,
 	// things need for a user for this site
+	cart: [{
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "Cart"
+	}],
 	// 
 	// Things needed for the authorization for admin and user.
 	authLevel: {
