@@ -1,31 +1,22 @@
 // all the order details dashboard route code goes here
-const _get = require("../../libs/get");
-const _order = require("../../libs/orders");
+const order = require("../../libs/orders");
 const error500 = require("../errors/error500");
-const _bird = require("../../utils/messageBird");
-const logger = require("../../utils/logger");
+const bird = require("../../utils/messageBird");
 
 module.exports = {
-	get(req, res) {
+	get: async (req, res) => {
 		try {
 			// ci is just for people not to easily know my orderId
-			logger.log(req.query.ci);
 			const orderId = req.query.ci;
 
-			_order.byId(orderId, (err, order) => {
-				if (err) {
-					console.error(":::", err);
-				}
-				else {
-					res.render("admin/orderDetails", {
-						bird: _bird.fly,
-						order: order
-					});
-					// res.send(order);
-				}
+			const theOrder = await order.findById(orderId);
+			res.render("admin/orderDetails", {
+				bird: bird.fly,
+				order: theOrder
 			});
+
 		} catch (err) {
-			_bird.message("danger", err);
+			bird.message("danger", err);
 			console.error(":::", err);
 			error500(req, res);
 		}

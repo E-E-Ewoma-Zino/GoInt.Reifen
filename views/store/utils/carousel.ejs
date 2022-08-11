@@ -5,8 +5,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<h1>2022</h1>
-						<h2>Riding Home.</h2>
+						<h1 class="addYear"></h1>
+						<h2>Riding Home</h2>
 						<a href="/store/categories" class="primary-btn">See More</a>
 					</div>
 				</div>
@@ -16,8 +16,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<h1>2022</h1>
-						<h2>Riding Home.</h2>
+						<h1 class="addYear"></h1>
+						<h2>Smooth Rides</h2>
 						<a href="/store/categories" class="primary-btn">See More</a>
 					</div>
 				</div>
@@ -27,8 +27,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<h1>2022</h1>
-						<h2>Riding Home.</h2>
+						<h1 class="addYear"></h1>
+						<h2>Safty First</h2>
 						<a href="/store/categories" class="primary-btn">See More</a>
 					</div>
 				</div>
@@ -36,4 +36,9 @@
 		</div>
 	</div>
 </section>
+<script>
+	document.querySelectorAll(".addYear")[0].innerHTML = new Date().getFullYear();
+	document.querySelectorAll(".addYear")[1].innerHTML = new Date().getFullYear();
+	document.querySelectorAll(".addYear")[2].innerHTML = new Date().getFullYear();
+</script>
 <!-- Hero Slider End -->

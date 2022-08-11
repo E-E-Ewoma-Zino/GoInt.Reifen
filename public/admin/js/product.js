@@ -59,14 +59,14 @@ function displayProductTable(products) {
 	});
 }
 
-// on page load
-// Display Products in product page
+async function getProducts(){
+	try{
+		const products = await (await axios.get("/api/get/product/all")).data;
+		displayProductTable(products.data);
+	}catch(err){
+		console.error("Error:", err);
+		console.error("Error:", err.response.data);
+	}
+}
 
-getAxios("/admin/productsAPI", (err, data)=>{
-	if (err) {
-		console.log("err:::", err);
-	}
-	else{
-		displayProductTable(data);
-	}
-});
+getProducts();

@@ -1,38 +1,68 @@
 {
-	"repairing": {
-		"title": "Repairing",
-		"topic": "Tire Repair",
-		"img": "/home/images/tire6.jpg",
-		"body": [
-			"Go Int. Reifen and More is keen to provide you with the best of services ranging from repairing worn-out tires to selling brand new ones. We also export tires out of the country and if we export, that means we also import tires into the country as well.",
-			"Our main priority is to ensure that when you are out on the roads driving, you are doing it with the best quality of tires. Your safety is our number 1 priority."
-		]
+	"page": "servicesDetails",
+	"meta": {
+		"title": "Our Services",
+		"description": "RENTOLL is an online real estate listing platform that connects you easily to your new home. We make it easy for anyone to find and rent apartments in their desired location.",
+		"keywords": "Rentoll, real-estate, real_estate, RENTOLL, REAL STATE, looking for house, renting",
+		"og": {
+			"site_name": "Rentoll",
+			"title": "Rentoll Real Estate",
+			"url": "https://www.rentollhomes.com",
+			"description": "RENTOLL is an online real estate listing platform that connects you easily to your new home. We make it easy for anyone to find and rent apartments in their desired location.",
+			"image": "https://rentollhomes.com/home/img/background/bg-sm-house1.jpg"
+		}
 	},
-	"exporting": {
-		"title": "Exporting",
-		"topic": "Exporting Tires out of the country",
-		"img": "/home/images/tire10.jpg",
-		"body": [
-			"Go Int. Reifen and More is keen to provide you with the best of services ranging from repairing worn-out tires to selling brand new ones. We also export tires out of the country and if we export, that means we also import tires into the country as well.",
-			"Our main priority is to ensure that when you are out on the roads driving, you are doing it with the best quality of tires. Your safety is our number 1 priority."
-		]
+	"content": {
+		"exporting": {
+			"title": "Exporting",
+			"topic": "Exporting Tires out of the country",
+			"img": "/home/images/vector/export.png",
+			"body": [
+				"Go Int. Reifen and More is keen to provide you with the best of services ranging from repairing worn-out tires to selling brand new ones. We also export tires out of the country and if we export, that means we also import tires into the country as well.",
+				"Our main priority is to ensure that when you are out on the roads driving, you are doing it with the best quality of tires. Your safety is our number 1 priority."
+			],
+			"whyUs": {
+				"title": "Why work with us?",
+				"body": [
+					"Our service begins with a careful internal and external inspection of your tire by one of our tire technicians to determine the cause and extent of any damage. This allows us to determine if your tire should be replaced or recycled.",
+					"Let us get your tire to you. We export tires all over the world."
+				]
+			}
+		},
+		"importing": {
+			"title": "Importing",
+			"topic": "Tire Importation",
+			"img": "/home/images/vector/import.png",
+			"body": [
+				"Go Int. Reifen and More is keen to provide you with the best of services ranging from repairing worn-out tires to selling brand new ones. We also export tires out of the country and if we export, that means we also import tires into the country as well.",
+				"Our main priority is to ensure that when you are out on the roads driving, you are doing it with the best quality of tires. Your safety is our number 1 priority."
+			],
+			"whyUs": {
+				"title": "Why work with us?",
+				"body": [
+					"Our service begins with a careful internal and external inspection of your tire by one of our tire technicians to determine the cause and extent of any damage. This allows us to determine if your tire should be replaced or recycled.",
+					"Let us get your tire to you. We export tires all over the world."
+				]
+			}
+		},
+		"recycling": {
+			"title": "Recycling",
+			"topic": "Reclycling Worn-Out Tires",
+			"img": "/home/images/vector/recycle.png",
+			"body": [
+				"Go Int. Reifen and More is keen to provide you with the best of services ranging from repairing worn-out tires to selling brand new ones. We also export tires out of the country and if we export that means we also import tires into the country as well.",
+				"Our main priority is to ensure that when you are out on the roads driving, you are doing it with the best quality of tires. Your safety is our number 1 priority."
+			],
+			"whyUs": {
+				"title": "Why work with us?",
+				"body": [
+					"Our service begins with a careful internal and external inspection of your tire by one of our tire technicians to determine the cause and extent of any damage. This allows us to determine if your tire should be replaced or recycled.",
+					"Let us get your tire to you. We export tires all over the world."
+				]
+			}
+		}
 	},
-	"importing": {
-		"title": "Importing",
-		"topic": "Tire Importation",
-		"img": "/home/images/tire12.jpg",
-		"body": [
-			"Go Int. Reifen and More is keen to provide you with the best of services ranging from repairing worn-out tires to selling brand new ones. We also export tires out of the country and if we export, that means we also import tires into the country as well.",
-			"Our main priority is to ensure that when you are out on the roads driving, you are doing it with the best quality of tires. Your safety is our number 1 priority."
-		]
-	},
-	"recycling": {
-		"title": "Recycling",
-		"topic": "Reclycling Worn-Out Tires",
-		"img": "/home/images/tire11.jpg",
-		"body": [
-			"Go Int. Reifen and More is keen to provide you with the best of services ranging from repairing worn-out tires to selling brand new ones. We also export tires out of the country and if we export that means we also import tires into the country as well.",
-			"Our main priority is to ensure that when you are out on the roads driving, you are doing it with the best quality of tires. Your safety is our number 1 priority."
-		]
+	"footer": {
+		"title": "Rentoll is a service provider site to find the best places to live on this planet"
 	}
 }

@@ -2,18 +2,18 @@
 
 // ================================== GET CATEGORIES =========================
 // Get all the avaliable categories
-axios.get("/api/category").then((res) => {
+axios.get("/api/get/product/all").then((res) => {
 	console.log("res:", res);
 
-	if (!res.data.message.length) return messager({
+	if (res.data.err) return messager({
 		replace: ["success", "danger"],
-		message: "Category list is empty"
+		message: "Category list is empty " + res.data.err
 	});
 
 	// this would be used to show the categories in the dom
 	const categoryList = document.getElementById("categoryList");
 
-	res.data.message.forEach(category => {
+	getCategories(res.data.data).forEach(category => {
 		const categoryOption = document.createElement("option");
 
 		categoryOption.innerText = category.name;

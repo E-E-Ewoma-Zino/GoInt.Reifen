@@ -8,51 +8,46 @@
 					<h5 class="d-inline">Go Int Reifen</h5>
 				</a>
 			</div>
-			<nav class="main-menu mobile-menu">
+			<nav class="main-menu mobile-menu im_lazy">
 				<ul>
-					<li><a class="active" href="/store/home">Home</a></li>
+					<li style="margin-left: auto;"><a class="active" href="/store/home">Home</a></li>
 					<li><a href="/store/categories">Shop</a>
-						<ul class="sub-menu">
+						<!-- <ul class="sub-menu">
 							<li><a href="/store/product-page">Product Page</a></li>
 							<li><a href="/store/shopping-cart">Shopping Card</a></li>
 							<li><a href="/store/check-out">Check out</a></li>
-						</ul>
+						</ul> -->
 					</li>
-					<li><a href="/store/check-out">Blog</a></li>
 					<li><a href="/store/contact">Contact</a></li>
 				</ul>
 			</nav>
 			<div class="nav-options d-flex justify-content-end align-items-center position-relative">
-				<img src="/store/img/icons/search.png" alt="" class="search-trigger hoverable mr-3">
-				<% if(!user.login) { %>
-					<a href="/store/login-register">
-						<img src="/store/img/icons/man.png" alt="empty profile img">
-					</a>
-					<!-- <a href="/store/#" class="in">Sign in</a> -->
-					<% }else{ %>
-						<a class="mr-3" href="/store/shopping-cart">
-							<img src="/store/img/icons/bag.png" alt="cart img">
-							<span>2</span>
-						</a>
-						<img src="/store/img/profile.jpg" class="img-fluid profile hoverable" alt="profile img">
-						<!-- <span><%= user.name.substr(0,1).toUpperCase() %></span> -->
-						<% } %>
-						<div class="user-nav">
-							<ul class="nav flex-column">
-								<li class="nav-item text-right bg-p bg-hover-s">
-									<a class="nav-link text-white" href="#">Link</a>
-								</li>
-								<li class="nav-item text-right bg-p bg-hover-s">
-									<a class="nav-link text-white" href="#">Link</a>
-								</li>
-								<li class="nav-item text-right bg-p bg-hover-s">
-									<a class="nav-link text-white" href="#">Link</a>
-								</li>
-								<li class="nav-item text-right bg-p bg-hover-s">
-									<a class="nav-link text-white" href="/store/logout">Logout</a>
-								</li>
-							</ul>
-						</div>
+				<img src="/store/img/icons/search.png" alt="search" class="search-trigger hoverable mr-3">
+				<!-- <a href="/store/login-register">
+					<img src="/store/img/icons/man.png" alt="empty profile img">
+				</a> -->
+				<!-- <a href="/store/#" class="in">Sign in</a> -->
+				<!-- <a class="mr-3" href="/store/shopping-cart">
+					<img src="/store/img/icons/bag.png" alt="cart img">
+					<span>2</span>
+				</a> -->
+				<!-- <img src="/store/img/profile.jpg" class="img-fluid profile hoverable" alt="profile img"> -->
+				<!-- <div class="user-nav">
+					<ul class="nav flex-column">
+						<li class="nav-item text-right bg-p bg-hover-s">
+							<a class="nav-link text-white" href="#">Link</a>
+						</li>
+						<li class="nav-item text-right bg-p bg-hover-s">
+							<a class="nav-link text-white" href="#">Link</a>
+						</li>
+						<li class="nav-item text-right bg-p bg-hover-s">
+							<a class="nav-link text-white" href="#">Link</a>
+						</li>
+						<li class="nav-item text-right bg-p bg-hover-s">
+							<a class="nav-link text-white" href="/store/logout">Logout</a>
+						</li>
+					</ul>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -65,19 +60,19 @@
 			<div class="col-md-4">
 				<div class="header-item">
 					<img src="/store/img/icons/delivery.png" alt="">
-					<p>Free shipping on orders over $30 in USA</p>
+					<p>World wide exports of our products</p>
 				</div>
 			</div>
 			<div class="col-md-4 text-left text-lg-center">
 				<div class="header-item">
 					<img src="/store/img/icons/voucher.png" alt="">
-					<p>20% Student Discount</p>
+					<p>Negotiatable prices</p>
 				</div>
 			</div>
 			<div class="col-md-4 text-left text-xl-right">
 				<div class="header-item">
 					<img src="/store/img/icons/sales.png" alt="">
-					<p>30% off on dresses. Use code: 30OFF</p>
+					<p>Affordable for all type of users</p>
 				</div>
 			</div>
 		</div>

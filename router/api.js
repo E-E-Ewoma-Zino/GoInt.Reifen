@@ -2,33 +2,30 @@
 const express = require("express");
 const uploads = require("../config/multer");
 const products = require("../api/products");
-const category = require("../api/categories");
-const login = require("../controllers/admin/login");
 const orders = require("../controllers/admin/order");
 const apiRedirect = require("../middleware/apiRedirect");
+const getReq = require("../api/getReq");
 
 // This router is for the home / routes
 const router = express.Router();
 
+// @desc	get request
+// @route	/get/:schema/:method
+router.get("/get/:schema/:method", (req, res) => getReq(req, res));
 
-// @desc    login page
-// @route   GET /admin/
-router.get("/", apiRedirect, (req, res) => login.get(req, res));
+// POST
 
-// @desc    products page
-// @route   GET /admin/products
-router.get("/products", (req, res) => products.get(req, res));
+// Product
+// @desc	products page
+// @route	POST /admin/products
+router.route("/products")
+.post(uploads.array("image"), (req, res) => products.post(req, res))
+.put(uploads.array("image"), (req, res) => products.put(req, res))
+.patch((req, res) => products.patch(req, res))
+.delete((req, res) => products.delete(req, res));
 
-// @desc    products page
-// @route   POST /admin/products
-router.post("/products", uploads.array("image"), (req, res) => products.post(req, res));
-
-// @desc    orders page
-// @route   GET /admin/orders
+// @desc	orders page
+// @route	GET /admin/orders
 router.get("/orders", apiRedirect, (req, res) => orders.get(req, res));
-
-// @desc    category page
-// @route   GET /admin/category
-router.get("/category", (req, res) => category.get(req, res));
 
 module.exports = router;

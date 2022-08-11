@@ -16,14 +16,13 @@
 		<div class="row">
 			<div class="col-lg-4">
 				<div class="page-breadcrumb">
-					<h2>Dresses<span>.</span></h2>
-					<a href="#">Home</a>
-					<a href="#">Dresses</a>
-					<a class="active" href="#">Night Dresses</a>
+					<h2>Tiers<span>.</span></h2>
+					<a href="/store">Home</a>
+					<a href="/store/categories">Categories</a>
 				</div>
 			</div>
 			<div class="col-lg-8">
-				<img src="img/add.jpg" alt="">
+				<img src="img/ads.jpg" alt="ads" style="height: 8em; width: 100%; object-fit: cover; object-position: top;">
 			</div>
 		</div>
 	</div>
@@ -38,25 +37,26 @@
 				<div class="col-lg-12">
 					<div class="categories-filter">
 						<div class="cf-left">
-							<form action="#">
+							<!-- <form action="#">
 								<select class="sort">
 									<option value="">Sort by</option>
 									<option value="">Orders</option>
 									<option value="">Newest</option>
 									<option value="">Price</option>
 								</select>
-							</form>
+							</form> -->
 						</div>
 						<div class="cf-right">
-							<span><%= products.length %> Products</span>
+							<!-- <span><%= products.length %> Products</span>
 							<a href="#x">2</a>
 							<a href="#x" class="active">4</a>
-							<a href="#x">6</a>
+							<a href="#x">6</a> -->
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<% if(products.length){ %>
 		<% do{ %>
 		<div class="row product-row">
 			<div class="col-lg-6 col-md-6">
@@ -166,6 +166,11 @@
 				</div>
 			</div>
 		</div>
+		<% }else{ %>
+			<div class="">
+				<h4>No products yet.</h4>
+			</div> 
+			<% } %> 
 	</div>
 </section>
 <!-- Categories Page Section End -->

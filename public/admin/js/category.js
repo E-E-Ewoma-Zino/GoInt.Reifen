@@ -1,5 +1,5 @@
 // 
-prepareCategoryList((cb)=>{
+prepareCategoryList((cb) => {
 	displayCategory(cb || []);
 });
 

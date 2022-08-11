@@ -1,0 +1,50 @@
+{
+	"page": "home",
+	"meta": {
+		"title": "Home",
+		"description": "RENTOLL is an online real estate listing platform that connects you easily to your new home. We make it easy for anyone to find and rent apartments in their desired location.",
+		"keywords": "Rentoll, real-estate, real_estate, RENTOLL, REAL STATE, looking for house, renting",
+		"og": {
+			"site_name": "Rentoll",
+			"title": "Rentoll Real Estate",
+			"url": "https://www.rentollhomes.com",
+			"description": "RENTOLL is an online real estate listing platform that connects you easily to your new home. We make it easy for anyone to find and rent apartments in their desired location.",
+			"image": "https://rentollhomes.com/home/img/background/bg-sm-house1.jpg"
+		}
+	},
+	"content": {
+		"header": {
+			"title": "Tire Exporting Services",
+			"text": "Go Int. Reifen and More, is keenly to providing professional services to our customers."
+		},
+		"introduction": {
+			"title": "Supplying customers with quality tires all over the world",
+			"text": "Buy the perfect tires for your vehicle. We provide tires ready for export."
+		},
+		"details1": {
+			"title": "How do I know when my car tires need to be replaced?",
+			"body": [
+				"Inspect your tires if the tread bar is flush with the tire tread",
+				"Check the wear of your tread quickly by inserting a Lincoln penny into it",
+				"Check for any abnormal bulges or bubbles in the sidewall",
+				"Check for dry rot and have affected tires inspected or replaced"
+			]
+		},
+		"details2": {
+			"title": "Should I change my tires?",
+			"text": "Bald tires aren't something you can fix with a tread toupee. They're unsafe and need to be replaced. To measure your tires' treads, grab a penny and watch the video."
+		},
+		"services": {
+			"title": "Services that we offer",
+			"text": "Selling and Repairing or tire and it's parts. Don't think that tire will last long? Bring it to us we got your back! Your safty is our priority",
+			"body": [
+				"Importing",
+				"Exporting",
+				"Recycling"
+			]
+		}
+	},
+	"footer": {
+		"title": "Rentoll is a service provider site to find the best places to live on this planet"
+	}
+}

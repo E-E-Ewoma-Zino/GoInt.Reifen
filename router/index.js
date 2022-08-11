@@ -10,7 +10,7 @@ const router = express.Router();
 router.get("/", (req, res) => res.redirect("/home"));
 
 // @desc	Home Router
-router.get("/home", (req, res) => home.get(req, res));
+router.get("/home", (req, res) => home(req, res));
 
 // @desc	About Route
 router.get("/about", (req, res) => aboutUs(req, res));

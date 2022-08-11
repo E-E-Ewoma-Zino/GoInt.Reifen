@@ -5,10 +5,11 @@ const contact = require("../controllers/store/contact");
 const productPage = require("../controllers/store/product-page");
 const checkOut = require("../controllers/store/check-out");
 const shoppingCart = require("../controllers/store/shopping-cart");
-const auth = require("../controllers/auth/authentication");
 const loginRegister = require("../controllers/store/login-register");
-const userOnly = require("../middleware/userOnly");
 const getUser = require("../middleware/getUser");
+const register = require("../authentication/register");
+const login = require("../authentication/login");
+const logout = require("../authentication/logout");
 
 const router = express.Router();
 
@@ -19,13 +20,13 @@ router.get("/", getUser, (req, res) => res.redirect("/store/home"));
 router.get("/login-register", getUser, (req, res) => loginRegister.get(req, res));
 
 // @desc	Register router
-router.post("/register", getUser, (req, res) => auth.register(req, res));
+router.post("/register", getUser, (req, res) => register(req, res));
 
 // @desc	Login router
-router.post("/login", getUser, (req, res, next) => auth.login(req, res, next));
+router.post("/login", getUser, (req, res, next) => login(req, res, next));
 
 // @desc	LogOut router
-router.get("/logOut", getUser, (req, res) => auth.logOut(req, res));
+router.get("/logOut", getUser, (req, res) => logout(req, res));
 
 // @desc	Store Router
 router.get("/home", getUser, (req, res) => home.get(req, res));

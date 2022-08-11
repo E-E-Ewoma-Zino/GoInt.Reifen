@@ -61,8 +61,8 @@
 						<li><span>Category :</span>
 							<% product.categories.map(category => { %>
 							<a class="text-dark"
-								href="/store/categories?q=<%= category.name %>"><%= category.name %></a>
-							<% }) %>
+								href="/store/categories?q=<%= category %>"><%= category %></a>
+							<% }); %>
 						</li>
 						<!-- <li><span>Tags :</span> man, shirt, dotted, elegant, cool</li> -->
 					</ul>

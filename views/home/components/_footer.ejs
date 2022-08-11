@@ -5,42 +5,42 @@
 				<div class="col-lg-12">
 					<div class="footer-col first">
 						<h6>About Website</h6>
-						<p class="p-small"><%= page["_footer_about"] %></p>
+						<p class="p-small"><%= footer.title %></p>
 					</div> <!-- end of footer-col -->
 					<div class="footer-col second">
 						<h6>Links</h6>
 						<ul class="list-unstyled li-space-lg p-small">
-							<li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li>
-							<li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li>
-							<li>Menu: <a href="#header">Home</a>, <a href="#details">Details</a>, <a href="#services">Services</a>, <a href="#contact">Contact</a></li>
+							<!-- <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li> -->
+							<!-- <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li> -->
+							<li>Menu: <a href="/">Home</a>, <a href="/#details">Details</a>, <a href="/services">Services</a>, <a href="/#contact">Contact</a></li>
 						</ul>
 					</div> <!-- end of footer-col -->
 					<div class="footer-col third">
 						<span class="fa-stack">
-							<a href="#your-link">
+							<a href="<%= footer.contact.facebook %>">
 								<i class="fas fa-circle fa-stack-2x"></i>
 								<i class="fab fa-facebook-f fa-stack-1x"></i>
 							</a>
 						</span>
 						<span class="fa-stack">
-							<a href="#your-link">
+							<a href="<%= footer.contact.twitter %>">
 								<i class="fas fa-circle fa-stack-2x"></i>
 								<i class="fab fa-twitter fa-stack-1x"></i>
 							</a>
 						</span>
 						<span class="fa-stack">
-							<a href="#your-link">
+							<a href="tel:<%= footer.contact.phone[0] %>">
 								<i class="fas fa-circle fa-stack-2x"></i>
-								<i class="fab fa-pinterest-p fa-stack-1x"></i>
+								<i class="fas fa-phone-volume fa-stack-1x"></i>
 							</a>
 						</span>
 						<span class="fa-stack">
-							<a href="#your-link">
+							<a href="<%= footer.contact.instagram %>">
 								<i class="fas fa-circle fa-stack-2x"></i>
 								<i class="fab fa-instagram fa-stack-1x"></i>
 							</a>
 						</span>
-						<p class="p-small">We would love to hear from you <a href="mailto:contact@site.com"><strong>contact@site.com</strong></a></p>
+						<p class="p-small">We would love to hear from you <a href="mailto:<%= footer.contact.mail %>"><strong><%= footer.contact.mail %></strong></a></p>
 					</div> <!-- end of footer-col -->
 				</div> <!-- end of col -->
 			</div> <!-- end of row -->
@@ -53,7 +53,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<p class="p-small">Copyright © <a href="#your-link"><%= page["_footer_sitename"] %></a></p>
+					<p class="p-small">Copyright © <a href="<%= footer.siteUrl %>"><%= footer.siteName %></a></p>
 				</div> <!-- end of col -->
 			</div> <!-- enf of row -->
 		</div> <!-- end of container -->

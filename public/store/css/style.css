@@ -108,14 +108,20 @@
 	animation-iteration-count: infinite;
 }
 @keyframes rotate {
-	0%{
+	0% {
 		transform: rotateZ(360deg);
+		left: 0px;
+		top: 0px;
 	}
-	50%{
+	50% {
 		transform: rotateZ(355deg);
+		left: -6em;
+		top: -6em;
 	}
-	100%{
+	100% {
 		transform: rotateZ(360deg);
+		left: 0px;
+		top: 0px;
 	}
 }
 
@@ -2165,8 +2171,15 @@ ol {
 	}
 }
 
-/* Tablet Device : 768px */
+/* my code */
+@media screen and (min-width: 720px) {
+	.im_lazy{
+		transform: translateX(-21%);
+	}
+}
+/*  */
 
+/* Tablet Device : 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.header-section {
 		padding-left: 0;

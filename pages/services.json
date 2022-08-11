@@ -1,7 +1,46 @@
 {
-	"title": "Our Services",
-	"body": [
-		"Go Int. Reifen and More is keen to provide you with the best of services ranging from repairing worn-out tires to selling brand new ones, we also export tires out of the country, and if we export, that means we also import tires into the country as well.",
-		"Our main priority is to ensure that when you are out on the roads driving, you are doing it with the best quality of tires. Your safety is our number 1 priority."
-	]
+	"page": "services",
+	"meta": {
+		"title": "Our Services",
+		"description": "RENTOLL is an online real estate listing platform that connects you easily to your new home. We make it easy for anyone to find and rent apartments in their desired location.",
+		"keywords": "Rentoll, real-estate, real_estate, RENTOLL, REAL STATE, looking for house, renting",
+		"og": {
+			"site_name": "Rentoll",
+			"title": "Rentoll Real Estate",
+			"url": "https://www.rentollhomes.com",
+			"description": "RENTOLL is an online real estate listing platform that connects you easily to your new home. We make it easy for anyone to find and rent apartments in their desired location.",
+			"image": "https://rentollhomes.com/home/img/background/bg-sm-house1.jpg"
+		}
+	},
+	"content": {
+		"title": "Our Services",
+		"services": [
+			"Go Int. Reifen and More is keen to provide you with the best of services ranging from recycling worn-out tires to selling of used tires, we also export tires out of the country, and if we export, that means we also import tires into the country as well.",
+			"Our main priority is to ensure that when you are out on the roads driving, you are doing it with the best quality of tires. Your safety is our number one priority."
+		],
+		"img": [
+			"Importing",
+			"Exporting",
+			"Recycling"
+		],
+		"body": [
+			"We import premium tires from all over the globe, so we can get them to you.",
+			"Exporting tires all over the world, getting you the right brand",
+			"Don't use that worn-out tire one more day! Bring it to us for recycling because we recycle old worn-out tires and get you something better."
+		],
+		"whyUs": {
+			"title": "Why work with us?",
+			"body": [
+				"Our service begins with a careful internal and external inspection of your tire by one of our tire technicians to determine the cause and extent of any damage. This allows us to determine if your tire should be replaced or recycled.",
+				"Let us get your tire to you. We export tires all over the world."
+			]
+		},
+		"fact": {
+			"title": "We export tires world🌐 wide",
+			"text": "Don't worry about distance, because Go Int Reifen got your back. Let us export your tires to you."
+		}
+	},
+	"footer": {
+		"title": "Rentoll is a service provider site to find the best places to live on this planet"
+	}
 }

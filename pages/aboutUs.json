@@ -1,31 +1,49 @@
 {
-	"title": "About",
-	"header": "About Us",
-	"body": [
-		"Go Int.Reifen and More, is primarily involved in the selling of car tires all over the world. We repair vehicle tire, and get them back in good shape. And if that tier is worn out and old, bring it to us for recycling.",
-		"Looking for premium tires? We import tires from all over the globe so you can get the very best. Along with importing, we can export that tire to your country and get it to you."
-	],
-	"services": [
-		"Servicing and repairing of worn-out tires, Let's get that tire back to shape.",
-		"We import premium tires from all over the globe, so we can get them to you.",
-		"Exporting tires all over the world, getting you the right brand",
-		"Buy your next tire from us. Trust us we will not disappoint",
-		"We just want to let you know that we got your back. Your safety is our biggest consign.",
-		"Don't use that worn-out tire one more day! Bring it to us for recycling because we recycle old worn-out tires and get you something better."
-	],
-	"whyUs": {
-		"title": "Why work with us?",
-		"body": [
-			"Our service begins with a careful internal and external inspection of your tire by one of our tire technicians to determine the cause and extent of any damage. This allows us to determine if your tire can be repaired or will need to be replaced.",
-			"If your flat tire, run-flat tire, or underinflated tire is fixable, we'll repair it in accordance with the U.S. Tire Manufacturers Association (USTMA) guidelines by plugging or patching any punctures from the inside."
-		]
-	},
-	"region": {
-		"title": "New elements added to the package",
-		"note": {
-			"title": "Possible region for tire repair",
-			"text": "Due to the fact that our only branch base in Germany, we only repair tires in Germany. That is until we open more branches."
+	"page": "aboutUs",
+	"meta": {
+		"title": "About Us",
+		"description": "RENTOLL is an online real estate listing platform that connects you easily to your new home. We make it easy for anyone to find and rent apartments in their desired location.",
+		"keywords": "Rentoll, real-estate, real_estate, RENTOLL, REAL STATE, looking for house, renting",
+		"og": {
+			"site_name": "Rentoll",
+			"title": "Rentoll Real Estate",
+			"url": "https://www.rentollhomes.com",
+			"description": "RENTOLL is an online real estate listing platform that connects you easily to your new home. We make it easy for anyone to find and rent apartments in their desired location.",
+			"image": "https://rentollhomes.com/home/img/background/bg-sm-house1.jpg"
 		}
 	},
-	"endNote": "If your tire can't be repaired, we'll let you know that it's time to buy a new tire. Should you choose to purchase with Goodyear, we'll help you find a quality new one suited to your needs. We'll also rebalance your tires, and if necessary, reactivate your tire pressure monitoring system."
+	"content": {
+		"header": "About Us",
+		"body": [
+			"Go Int.Reifen and More, is primarily involved in the selling of used car tires all over the world. We recycle vehicle tire, so you won't have to do that your self. So if your tiers are worn out and old, bring it to us for recycling.",
+			"Looking for tires? We export tires world wide, it doesn't matter if you are on the other half of the world, we are here for you."
+		],
+		"services": {
+			"title": "Services that we offer",
+			"text": "Selling and Repairing or tire and it's parts. Don't think that tire will last long? Bring it to us we got your back! Your safty is our priority",
+			"body": [
+				"Importing",
+				"Exporting",
+				"Recycling"
+			]
+		},
+		"whyUs": {
+			"title": "Why work with us?",
+			"body": [
+				"Our service begins with a careful internal and external inspection of your tire by one of our tire technicians to determine the cause and extent of any damage. This allows us to determine if your tire should be replaced or recycled.",
+				"Let us get your tire to you. We export tires all over the world."
+			]
+		},
+		"talk": {
+			"title": "We are always here for you",
+			"fact": {
+				"title": "We export tires world🌐 wide",
+				"text": "Don't worry about distance, because Go Int Reifen got your back. Let us export your tires to you."
+			}
+		},
+		"endNote": "If your tire needs to be replaced, contact us by clicking the button below."
+	},
+	"footer": {
+		"title": "Rentoll is a service provider site to find the best places to live on this planet"
+	}
 }

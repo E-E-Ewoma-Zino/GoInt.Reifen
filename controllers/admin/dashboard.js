@@ -1,17 +1,10 @@
 // all the admin dashboard route code goes here
-const _get = require("../../libs/get");
-const error500 = require("../errors/error500");
-const _bird = require("../../utils/messageBird");
-const logger = require("../../utils/logger");
+const bird = require("../../utils/messageBird");
 
 module.exports = {
-    get(req, res) {
-        try {
-            res.render("admin/dashboard");
-        } catch (err) {
-            _bird.message("danger", err);
-            console.error(":::", err);
-            error500(req, res);
-        }
-    }
+	get(req, res) {
+		res.render("admin/dashboard", {
+			bird: bird.fly
+		});
+	}
 }

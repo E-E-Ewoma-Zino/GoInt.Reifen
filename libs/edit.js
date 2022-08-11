@@ -1,110 +1,124 @@
-// A general file for CRUD 
+// manipulates the db
+const mongoose = require("mongoose");
+const alerts = require("../constants/alerts");
 
 class Edit {
 	constructor(schema) {
-		this.schema = schema;
+		// this.schema = schema;
+		let _schema = schema;
+		// this.setSchema = function(schema) { _schema = schema; }
+		this.getSchema = function () { return _schema; }
 	}
 
-	// find all the itema of a specific schema
-	find(callback) {
-		this.schema.find({}).exec((err, schemaItem) => {
-			if (err) {
-				return callback(err, null);
-			} else if (schemaItem) {
-				return callback(null, schemaItem);
-			} else {
-				return callback(null, null);
-			}
-		});
+	async findById(schemaId, callback) {
+		try {
+			if (!schemaId || !mongoose.isValidObjectId(schemaId)) return { status: 403, alert: alerts.WARNING, message: "Invalid request using id of " + schemaId, err: "Invalid Request!", data: null };
+
+			const item = await this.getSchema().findById({ _id: schemaId }).exec(callback);
+
+			if (!item) return { status: 404, alert: alerts.DANGER, message: "Could not find item with id " + schemaId, err: "Not found!", data: null };
+
+			return { status: 200, alert: alerts.SUCCESS, message: "Found item with id " + schemaId, err: null, data: item };
+		} catch (err) {
+			console.error("Server Error! Failed to findById:", err);
+			return { status: 500, alert: alerts.DANGER, message: "Server Error! Failed to findById", err: err.message, data: null };
+		}
 	}
 
-	// find an item by it's id
-	findById(id, callback) {
-		this.schema.findById({ _id: id }).exec((err, schemaItem) => {
-			if (err) {
-				return callback(err, null);
-			} else if (schemaItem) {
-				return callback(null, schemaItem);
-			} else {
-				return callback(null, null);
-			}
-		});
+	async findAllAndPopoulate(opt = {}, populateOpt = "", callback) {
+		try {
+			const item = await this.getSchema().find(opt).populate(populateOpt).exec(callback);
+
+			if (!item) return { status: 404, alert: alerts.DANGER, message: "Could not findAllAndPopoulate item with id " + schemaId, err: "Not found!", data: null };
+
+			return { status: 200, alert: alerts.SUCCESS, message: "Found item with id " + schemaId, err: null, data: item };
+		} catch (err) {
+			console.error("Server Error! Failed to findAllAndPopoulate:", err);
+			return { status: 500, alert: alerts.DANGER, message: "Server Error! Failed to findAllAndPopoulate", err: err.message, data: null };
+		}
 	}
 
-	// find an item by it's name
-	findByName(name, callback) {
-		this.schema.find({ name: name }).exec((err, schemaItem) => {
-			if (err) {
-				return callback(err, null);
-			} else if (schemaItem) {
-				return callback(null, schemaItem[0]);
-			} else {
-				return callback(null, null);
-			}
-		});
+	async findByIdAndPopulate(schemaId, populateOpt = "", callback) {
+		try {
+			if (!schemaId || !mongoose.isValidObjectId(schemaId)) return { status: 403, alert: alerts.WARNING, message: "Invalid request using id of " + schemaId, err: "Invalid Request!", data: null };
+
+			const item = await this.getSchema().findById({ _id: schemaId }).populate(populateOpt).exec(callback);
+
+			if (!item) return { status: 404, alert: alerts.DANGER, message: "Could not findByIdAndPopoulate item with id " + schemaId, err: "Not found!", data: null };
+
+			return { status: 200, alert: alerts.SUCCESS, message: "Found item with id " + schemaId, err: null, data: item };
+		} catch (err) {
+			console.error("Server Error! Failed to findByIdAndPopoulate:", err);
+			return { status: 500, alert: alerts.DANGER, message: "Server Error! Failed to findByIdAndPopoulate", err: err.message, data: null };
+		}
 	}
 
-	// find all the items of a specific schema
-	findAndPopulate(option, callback) {
-		this.schema.find({}).populate(option).exec((err, schemaItem) => {
-			if (err) {
-				return callback(err, null);
-			} else if (schemaItem) {
-				return callback(null, schemaItem);
-			} else {
-				return callback(null, null);
-			}
-		});
+	async findAll(opt = {}, callback) {
+		try {
+			const item = await this.getSchema().find(opt, callback);
+
+			if (!item) return { status: 404, alert: alerts.DANGER, message: "Could not findAll", err: "Not found!", data: null };
+
+			return { status: 200, alert: alerts.SUCCESS, message: "Found items", err: null, data: item };
+		} catch (err) {
+			console.error("Server Error! Failed to findAll:", err);
+			return { status: 500, alert: alerts.DANGER, message: "Server Error! Failed to findAll", err: err.message, data: null };
+		}
 	}
 
-	// find the item of a specific schema
-	findByIdAndPopulate(itemId, option, callback) {
-		this.schema.findById({_id: itemId}).populate(option).exec((err, schemaItem) => {
-			if (err) {
-				return callback(err, null);
-			} else if (schemaItem) {
-				return callback(null, schemaItem);
-			} else {
-				return callback(null, null);
-			}
-		});
+	async aggregate(agg = {}, callback) {
+		try {
+			const item = await this.getSchema().aggregate(agg, callback);
+
+			if (!item) return { status: 404, alert: alerts.DANGER, message: "Could not aggregate", err: "Not found!", data: null };
+
+			return { status: 200, alert: alerts.SUCCESS, message: "Found items", err: null, data: item };
+		} catch (err) {
+			console.error("Server Error! Failed to aggregate:", err);
+			return { status: 500, alert: alerts.DANGER, message: "Server Error! Failed to aggregate", err: err.message, data: null };
+		}
 	}
 
-	// this would create an item in the specified schema that calls this
-	create(items, callback) {
-		this.schema.create(items, (err, done) => {
-			if (err) {
-				return callback(err, null);
-			} else if (done) {
-				return callback(null, done);
-			} else {
-				return callback(null, null);
-			}
-		});
+	async create(data = {}, callback) {
+		try {
+			const item = await this.getSchema().create(data, callback);
+
+			if (!item) return { status: 404, alert: alerts.DANGER, message: "Could not create", err: "Not found!", data: null };
+
+			return { status: 200, alert: alerts.SUCCESS, message: "Found items", err: null, data: item };
+		} catch (err) {
+			console.error("Server Error! Failed to create:", err);
+			return { status: 500, alert: alerts.DANGER, message: "Server Error! Failed to create", err: err.message, data: null };
+		}
 	}
 
-	// delete an item
-	remove(id, callback) {
-		this.schema.deleteOne({ _id: id }, (err) => {
-			if (err) {
-				return callback(err, null);
-			} else {
-				return callback(null, true);
-			}
-		});
+	async remove(schemaId, callback) {
+		try {
+			const item = await this.getSchema().deleteOne({ _id: schemaId }, callback);
+
+			if (!item) return { status: 404, alert: alerts.DANGER, message: "Could not remove", err: "Not found!", data: null };
+
+			return { status: 200, alert: alerts.SUCCESS, message: "Found items", err: null, data: item };
+		} catch (err) {
+			console.error("Server Error! Failed to remove:", err);
+			return { status: 500, alert: alerts.DANGER, message: "Server Error! Failed to remove", err: err.message, data: null };
+		}
 	}
 
 	// update an item
-	update({itemToupdateId: id, whatToUpdate: querry, options: opt, newUpdate: update}, callback){
-		this.schema.updateOne({ _id: id }, { [opt]: { [querry]: update } }, (err, done) => {
-			if (err) {
-				return callback(err, null);
-			} else if(done) {
-				return callback(null, done);
-			}else{
-				return callback(null, null);
-			}
-		});
+	async update({ itemToupdateId, propertyToUpdate = "", optionsToUse = "", updateValue = "" }, callback) {
+		try {
+			if (!itemToupdateId._id || !mongoose.isValidObjectId(itemToupdateId._id)) return { status: 403, alert: alerts.WARNING, message: "Invalid request using id of " + schemaId, err: "Invalid Request!", data: null };
+
+			const item = await this.getSchema().findOneAndUpdate(itemToupdateId, { [optionsToUse]: { [propertyToUpdate]: updateValue } }, callback);
+
+			if (!item) return { status: 404, alert: alerts.DANGER, message: "Could not update", err: "Not found!", data: null };
+
+			return { status: 200, alert: alerts.SUCCESS, message: "Found items", err: null, data: item };
+		} catch (err) {
+			console.error("Server Error! Failed to update:", err);
+			return { status: 500, alert: alerts.DANGER, message: "Server Error! Failed to update", err: err.message, data: null };
+		}
 	}
 }
 

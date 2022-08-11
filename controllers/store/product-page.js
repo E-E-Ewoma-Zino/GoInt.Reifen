@@ -1,30 +1,20 @@
 // controlls the store product-page route
-const product = require("../../libs/product");
+const product = require("../../libs/products");
 const error500 = require("../errors/error500");
 
 module.exports = {
-	get: (req, res)=>{
-		product.findByIdAndPopulate(req.query.q, "categories", (findProduct_err, foundProduct)=>{
-			if(findProduct_err){
-				return error500(req, res);
-			}else if (foundProduct){
-				product.find((findAllProducts_err, foundAllProducts)=>{
-					if(findAllProducts_err){
-						return error500(req, res);
-					}else if (foundAllProducts){
-						res.render("store/product-page",{
-							user: req.userDetails,
-							title: foundProduct.name,
-							products: foundAllProducts,
-							product: foundProduct
-						});
-					}else{
-						return error500(req, res);
-					}
-				});
-			}else{
-				return error500(req, res);
-			}
+	get: async (req, res)=>{
+		const theProduct = await product.findById(req.query.q);
+		if(theProduct.err) error500(req, res);
+
+		const allProducts = await (await product.findAll()).data;
+		if(allProducts.err) error500(req, res);
+
+		res.render("store/product-page",{
+			user: req.userDetails,
+			title: "Home",
+			product: theProduct.data,
+			products: allProducts
 		});
 	}
 }
