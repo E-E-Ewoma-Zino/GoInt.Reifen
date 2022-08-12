@@ -1,6 +1,6 @@
 // order
 const Edit = require("./edit");
-const order = require("../schema/orders");
+const order = require("../schema/Orders");
 
 class Order extends Edit{
 	constructor(schema){
