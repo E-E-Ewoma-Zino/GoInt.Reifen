@@ -32,11 +32,11 @@ function displayProductTable(products) {
 			<td>
 				<div class="option template-demo d-flex justify-content-between flex-nowrap">
 					<button type="button"
-						class="btn btn-primary btn-rounded btn-icon" onclick="btnLink('/admin/edit/${data._id}?edit=true', '${data._id}')">
+						class="btn btn-primary btn-rounded btn-icon" onclick="btnLink('/admin/edit/${data.name}?id=${data._id}&edit=true', '${data._id}')">
 						<i class="ti-pencil"></i>
 					</button>
 					<button type="button"
-						class="btn btn-danger btn-rounded btn-icon" onclick="modal({type: 'form', message: 'Are you sure you want to delete <strong>${data.name}</strong>.', title: 'Confirm Your Request', method: {name: 'deleteItem', params: {url: 'productsAPI', itemId: '${data._id}'}}})">
+						class="btn btn-danger btn-rounded btn-icon" onclick="modal({type: 'form', message: 'Are you sure you want to delete <strong>${data.name}</strong>.', title: 'Confirm Your Request', method: {name: 'deleteItem', params: {url: '/api/products', itemId: '${data._id}'}}})">
 						<i class="ti-trash"></i>
 					</button>
 					<button type="button"
@@ -54,16 +54,49 @@ function displayProductTable(products) {
 	products.forEach((product, index) => {
 		const tr = document.createElement("tr");
 		tr.className = "option-container";
-		tr.innerHTML = tableBody({index, ...product})
-		tbody.append(tr); 
+		tr.innerHTML = tableBody({ index, ...product })
+		tbody.append(tr);
 	});
 }
 
-async function getProducts(){
-	try{
+async function getProducts() {
+	try {
 		const products = await (await axios.get("/api/get/product/all")).data;
+		console.log('res', products);
 		displayProductTable(products.data);
-	}catch(err){
+	} catch (err) {
+		console.error("Error:", err);
+		console.error("Error:", err.response.data);
+	}
+}
+
+async function deleteItem(url, id) {
+	const data = {
+		productId: id
+	}
+
+	try {
+		const deleted = await axios.delete(url, { data: data });
+
+		closeModal();
+
+		if (deleted.status !== 200) return messager({
+			replace: ["success", "danger"],
+			message: "Deleted"
+		});
+
+		messager({
+			replace: ["danger", "success"],
+			message: "Deleted"
+		});
+		getProducts();
+	} catch (err) {
+		closeModal();
+
+		messager({
+			replace: ["success", "danger"],
+			message: "Failed to delete"
+		});
 		console.error("Error:", err);
 		console.error("Error:", err.response.data);
 	}

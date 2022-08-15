@@ -38,7 +38,7 @@ module.exports = (req, res) => {
 	async function all(req, res) {
 		try {
 			const {status, ...data} = await schema.findAll();
-			return res.status(status).json({ status, data });
+			return res.status(status).json({ status, ...data });
 		} catch (error) {
 			return res.status(500).json({ message: "An error occured in our server", err: error.message, alert: "danger" });
 		}
@@ -47,8 +47,7 @@ module.exports = (req, res) => {
 	async function byId(req, res) {
 		try {
 			const {status, ...data} = await schema.findById(req.query.id);
-			if (status === 200) return res.status(status).json({ data, alert: "success", err: null });
-			return res.status(status).json({ status, data });
+			return res.status(status).json({ status, ...data });
 		} catch (error) {
 			return res.status(500).json({ message: "An error occured in our server", err: error.message, alert: "danger" });
 		}
@@ -57,8 +56,7 @@ module.exports = (req, res) => {
 	async function byOpt(req, res) {
 		try {
 			const {status, ...data} = await schema.findAll({ [req.query.opt]: req.query.value });
-			if (status === 200) return res.status(status).json({ data, alert: "success", err: null });
-			return res.status(status).json({ status, data });
+			return res.status(status).json({ status, ...data });
 		} catch (error) {
 			return res.status(500).json({ message: "An error occured in our server", err: error.message, alert: "danger" });
 		}
@@ -67,8 +65,7 @@ module.exports = (req, res) => {
 	async function allAndPopulate(req, res) {
 		try {
 			const {status, ...data} = await schema.findAllAndPopoulate({}, req.query.opt);
-			if (status === 200) return res.status(status).json({ data, alert: "success", err: null });
-			return res.status(status).json({ status, data });
+			return res.status(status).json({ status, ...data });
 		} catch (error) {
 			return res.status(500).json({ message: "An error occured in our server", err: error.message, alert: "danger" });
 		}
@@ -77,8 +74,7 @@ module.exports = (req, res) => {
 	async function byIdAndPopulate(req, res) {
 		try {
 			const {status, ...data} = await schema.findByIdAndPopoulate(req.query.id, req.query.opt);
-			if (status === 200) return res.status(status).json({ data, alert: "success", err: null });
-			return res.status(status).json({ status, data });
+			return res.status(status).json({ status, ...data });
 		} catch (error) {
 			return res.status(500).json({ message: "An error occured in our server", err: error.message, alert: "danger" });
 		}
@@ -87,8 +83,7 @@ module.exports = (req, res) => {
 	async function search(req, res) {
 		try {
 			const {status, ...data} = await schema.search(req.query.query, req.query.path);
-			if (status === 200) return res.status(status).json({ data, alert: "success", err: null });
-			return res.status(status).json({ status, data });
+			return res.status(status).json({ status, ...data });
 		} catch (error) {
 			return res.status(500).json({ message: "An error occured in our server", err: error.message, alert: "danger" });
 		}

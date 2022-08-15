@@ -45,7 +45,7 @@ router.get("/addProduct", (req, res) => addProduct.get(req, res));
 
 // @desc	edit products page
 // @route	GET /admin/edit/:productId
-router.get("/edit/:productId", (req, res) => editproduct.get(req, res));
+router.get("/edit/:productId", (req, res) => editproduct(req, res));
 
 // @desc	orders page
 // @route	GET /admin/orders

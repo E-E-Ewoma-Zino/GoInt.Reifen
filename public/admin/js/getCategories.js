@@ -3,7 +3,6 @@ function getCategories(productsArr) {
 	const everyCategory = [];
 	const categories = [];
 
-	console.log(">>>", productsArr)
 	productsArr.forEach(product => {
 		everyCategory.push(...product.categories);
 	});

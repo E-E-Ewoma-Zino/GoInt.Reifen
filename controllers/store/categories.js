@@ -1,7 +1,5 @@
 // controlls the store categories route
 const product = require("../../libs/products");
-const error500 = require("../errors/error500");
-const getCategories = require("./function/getCategories");
 
 module.exports = {
 	get: async (req, res)=>{
@@ -9,9 +7,8 @@ module.exports = {
 
 		res.render("store/categories",{
 			user: req.userDetails,
-			title: "Home",
-			products: allProducts,
-			categories: getCategories(allProducts)
+			title: "categories",
+			products: allProducts
 		});
 	}
 }

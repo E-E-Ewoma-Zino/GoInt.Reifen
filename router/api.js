@@ -5,6 +5,7 @@ const products = require("../api/products");
 const orders = require("../controllers/admin/order");
 const apiRedirect = require("../middleware/apiRedirect");
 const getReq = require("../api/getReq");
+const deleteMedia = require("../api/deleteMedia");
 
 // This router is for the home / routes
 const router = express.Router();
@@ -20,9 +21,13 @@ router.get("/get/:schema/:method", (req, res) => getReq(req, res));
 // @route	POST /admin/products
 router.route("/products")
 .post(uploads.array("image"), (req, res) => products.post(req, res))
-.put(uploads.array("image"), (req, res) => products.put(req, res))
-.patch((req, res) => products.patch(req, res))
+.put((req, res) => products.put(req, res))
+.patch(uploads.array("image"), (req, res) => products.patch(req, res))
 .delete((req, res) => products.delete(req, res));
+
+// @desc	delete a media
+// @route	/api/deletemedia
+router.delete("/deletemedia", (req, res) => deleteMedia(req, res));
 
 // @desc	orders page
 // @route	GET /admin/orders

@@ -9,6 +9,7 @@ module.exports = {
 		res.render("store/index", {
 			user: req.userDetails,
 			title: "Home",
+			categories: getCategories(allProducts),
 			products: allProducts,
 		});
 	}
