@@ -92,32 +92,35 @@
 	box-shadow: 3px 4px 17px 3px rgb(114 100 100);
 }
 
-.tire-circle{
-    position: absolute;
+.tire-circle {
+	position: absolute;
 	top: -7%;
-    right: -1%;
-    width: 20vmin;
-    height: 20vmin;
+	right: -1%;
+	width: 20vmin;
+	height: 20vmin;
 	border-radius: 50%;
 	background-color: black;
 }
 
-.swing{
+.swing {
 	transform: rotateZ(360deg);
 	animation: rotate 3s ease;
 	animation-iteration-count: infinite;
 }
+
 @keyframes rotate {
 	0% {
 		transform: rotateZ(360deg);
 		left: 0px;
 		top: 0px;
 	}
+
 	50% {
 		transform: rotateZ(355deg);
 		left: -6em;
 		top: -6em;
 	}
+
 	100% {
 		transform: rotateZ(360deg);
 		left: 0px;
@@ -125,15 +128,16 @@
 	}
 }
 
-.make-box-text-smaller{
+.make-box-text-smaller {
 	transform: scale(0.7) translate(45px, -31px);
 }
 
-@media only screen and (min-width: 425px){
-	.make-box-text-smaller{
+@media only screen and (min-width: 425px) {
+	.make-box-text-smaller {
 		transform: none;
 	}
 }
+
 /*  */
 
 html,
@@ -721,7 +725,7 @@ ol {
 .features-box .single-box-item.first-box .box-text {
 	position: absolute;
 	right: 24px;
-    top: 35px;
+	top: 35px;
 }
 
 .features-box .single-box-item.first-box .box-text .trend-alert {
@@ -2120,6 +2124,16 @@ ol {
 	width: 100%;
 }
 
+
+/* my code */
+.containImg {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
+/*  */
+
 /* ---------------------------------- Responsive Media Styles ---------------------------------*/
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 	.inner-header .main-menu ul li {
@@ -2173,10 +2187,14 @@ ol {
 
 /* my code */
 @media screen and (min-width: 720px) {
-	.im_lazy{
+	.im_lazy {
 		transform: translateX(-21%);
 	}
+	.containImg {
+		height: 15em;
+	}
 }
+
 /*  */
 
 /* Tablet Device : 768px */

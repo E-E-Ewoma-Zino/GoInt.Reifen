@@ -60,61 +60,9 @@
 </div> <!-- end of ex-basic-1 -->
 <!-- end of basic -->
 
-<!-- Services -->
-<div id="services" class="cards-1 bg-gray">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-5">
-				<div class="text-container">
-					<h2>
-						<%= page.services.title %>
-					</h2>
-					<p>
-						<%= page.services.text %>
-					</p>
-				</div> <!-- end of text-container -->
-			</div> <!-- end of col -->
-			<div class="col-md-7">
-				<div class="card-container grid-lg-3x grid-2x">
+<!-- services we offer -->
+<%- include("utils/services") %>
 
-					<!-- Card -->
-					<div class="card">
-						<div class="card-icon">
-							<span class="far fa-arrow-alt-circle-down"></span>
-						</div>
-						<div class="card-body">
-							<h5 class="card-title"><%= page.services.body[0] %></h5>
-						</div>
-					</div>
-					<!-- end of card -->
-
-					<!-- Card -->
-					<div class="card">
-						<div class="card-icon">
-							<span class="far fa-registered"></span>
-						</div>
-						<div class="card-body">
-							<h5 class="card-title"><%= page.services.body[1] %></h5>
-						</div>
-					</div>
-					<!-- end of card -->
-
-					<!-- Card -->
-					<div class="card">
-						<div class="card-icon">
-							<span class="far fa-arrow-alt-circle-up"></span>
-						</div>
-						<div class="card-body">
-							<h5 class="card-title"><%= page.services.body[2] %></h5>
-						</div>
-					</div>
-					<!-- end of card -->
-				</div> <!-- end of container -->
-			</div> <!-- end of col -->
-		</div> <!-- end of row -->
-	</div> <!-- end of container -->
-</div> <!-- end of cards-1 -->
-<!-- end of services -->
 
 <!-- Basic -->
 <div class="ex-basic-1 pt-3 pb-5">

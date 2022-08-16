@@ -140,6 +140,14 @@ a:hover {
 .bg-gray {
 	background-color: #f9fafe;
 }
+.onHover-primary:hover{
+	color: #fff!important;
+	background-color: #4555d2!important;
+}
+.onHover-transparent:hover{
+	color: #4555d2!important;
+	background-color: transparent!important;
+}
 
 .btn-solid-reg {
 	display: inline-block;
@@ -203,6 +211,26 @@ a:hover {
 	text-decoration: none;
 }
 
+.btn-outline-primary-reg {
+	display: inline-block;
+	padding: 1.375rem 2.25rem 1.375rem 2.25rem;
+	border: 1px solid #4555d2;
+	border-radius: 30px;
+	background-color: transparent;
+	color: #4555d2;
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 0;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-outline-primary-reg:hover {
+	background-color: #4555d2;
+	color: #ffffff;
+	text-decoration: none;
+}
+
 .btn-outline-lg {
 	display: inline-block;
 	padding: 1.625rem 2.625rem 1.625rem 2.625rem;
@@ -223,6 +251,26 @@ a:hover {
 	text-decoration: none;
 }
 
+.btn-outline-primary-lg {
+	display: inline-block;
+	padding: 1.625rem 2.625rem 1.625rem 2.625rem;
+	border: 1px solid #4555d2;
+	border-radius: 30px;
+	background-color: transparent;
+	color: #4555d2;
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 0;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-outline-primary-lg:hover {
+	background-color: #4555d2;
+	color: #ffffff;
+	text-decoration: none;
+}
+
 .btn-outline-sm {
 	display: inline-block;
 	padding: 1rem 1.5rem 1rem 1.5rem;
@@ -239,6 +287,26 @@ a:hover {
 
 .btn-outline-sm:hover {
 	background-color: #cc2973;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.btn-outline-primary-sm {
+	display: inline-block;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	border: 1px solid #4555d2;
+	border-radius: 30px;
+	background-color: transparent;
+	color: #4555d2;
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 0;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.btn-outline-primary-sm:hover {
+	background-color: #4555d2;
 	color: #ffffff;
 	text-decoration: none;
 }
@@ -474,7 +542,7 @@ a:hover {
 }
 
 .header .btn-solid-lg,
-.header .btn-outline-lg {
+.header .btn-outline-primary-lg {
 	margin-right: 0.25rem;
 	margin-bottom: 1.25rem;
 	margin-left: 0.25rem;
@@ -608,9 +676,9 @@ a:hover {
 
 .cards-1 .card {
 	display: inline-block;
-	margin-right: 1.5rem;
-	margin-bottom: 3.75rem;
-	margin-left: 1.5rem;
+	/* margin-right: auto; */
+	margin-bottom: auto;
+	/* margin-left: auto; */
 	width: 50%;
 	border: none;
 	background-color: transparent;
@@ -876,7 +944,7 @@ a:hover {
 }
 
 .footer .footer-col.third .fa-stack .fa-stack-2x {
-	color: #ffffff;
+	color: transparent;
 	transition: all 0.2s ease;
 }
 
@@ -1358,7 +1426,7 @@ a:hover {
 	}
 
 	.header .h1-large {
-		font-size: 4.25rem;
+		font-size: 4.2rem;
 		line-height: 4.875rem;
 	}
 
@@ -1559,7 +1627,7 @@ a:hover {
 /* end of min-width 1400px */
 
 /* my code */
-.hover:hover {
+:hover {
 	cursor: pointer;
 }
 

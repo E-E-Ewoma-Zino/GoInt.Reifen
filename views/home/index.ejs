@@ -1,139 +1,91 @@
 <%- include("components/_head") %>
-	<%- include("components/_navbar") %>
+<%- include("components/_navbar") %>
 
 
-		<!-- Header -->
-		<header id="header" class="header">
-			<img class="decoration-star" src="/home/images/decoration-star.svg" alt="alternative">
-			<img class="decoration-star-2" src="/home/images/decoration-star.svg" alt="alternative">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-7 col-xl-5">
-						<div class="text-container">
-							<h1 class="h1-large">
-								<%= page.header.title %>
-							</h1>
-							<p class="p-large">
-								<%= page.header.text %>
-							</p>
-							<div class="d-flex justify-content-between align-items-center">
-								<a class="btn-solid-lg text-center w-50" href="#introduction">More</a>
-								<a class="btn-outline-lg text-center w-50" href="#contact">Contact</a>
-							</div>
-						</div> <!-- end of text-container -->
-					</div> <!-- end of col -->
-					<div class="col-lg-5 col-xl-7 justify-content-center align-items-end d-none d-lg-flex">
-						<div class="image-container">
-							<img class="img-fluid college-size rounded-3" src="/home/images/products/tireImg1.jpg" alt="alternative">
-							<img class="img-fluid college-size rounded-3" src="/home/images/products/tireImg2.jpg" alt="alternative">
-							<img class="img-fluid college-size rounded-3" src="/home/images/products/tireImg3.jpg" alt="alternative">
-							<img class="img-fluid college-size rounded-3" src="/home/images/products/tireImg4.jpg" alt="alternative">
-							<img class="img-fluid college-size rounded-3 absolute-center" src="/home/images/products/tireImg5.jpg" alt="alternative">
-						</div> <!-- end of image-container -->
-					</div> <!-- end of col -->
-				</div> <!-- end of row -->
-			</div> <!-- end of container -->
-		</header> <!-- end of header -->
-		<!-- end of header -->
+<!-- Header -->
+<header id="header" class="header">
+	<img class="decoration-star" src="/home/images/decoration-star.svg" alt="alternative">
+	<img class="decoration-star-2" src="/home/images/decoration-star.svg" alt="alternative">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7 col-xl-5">
+				<div class="text-container">
+					<h1 class="h1-large">
+						<%= page.header.title %>
+					</h1>
+					<p class="p-large">
+						<%= page.header.text %>
+					</p>
+					<div class="d-flex justify-content-between align-items-center">
+						<a class="btn-solid-lg text-center onHover-primary w-50" href="#contact">Contact</a>
+						<a class="btn-outline-primary-lg text-center onHover-transparent w-50"
+							href="#introduction">More</a>
+					</div>
+				</div> <!-- end of text-container -->
+			</div> <!-- end of col -->
+			<div class="col-lg-5 col-xl-7 justify-content-center align-items-end d-none d-lg-flex">
+				<div class="image-container">
+					<img class="img-fluid college-size rounded-3" src="/home/images/products/tireImg1.jpg"
+						alt="alternative">
+					<img class="img-fluid college-size rounded-3" src="/home/images/products/tireImg2.jpg"
+						alt="alternative">
+					<img class="img-fluid college-size rounded-3" src="/home/images/products/tireImg3.jpg"
+						alt="alternative">
+					<img class="img-fluid college-size rounded-3" src="/home/images/products/tireImg4.jpg"
+						alt="alternative">
+					<img class="img-fluid college-size rounded-3 absolute-center"
+						src="/home/images/products/tireImg5.jpg" alt="alternative">
+				</div> <!-- end of image-container -->
+			</div> <!-- end of col -->
+		</div> <!-- end of row -->
+	</div> <!-- end of container -->
+</header> <!-- end of header -->
+<!-- end of header -->
 
 
-		<!-- utils for the counter -->
-		<%- include("utils/counter") %>
+<!-- utils for the counter -->
+<%- include("utils/counter") %>
 
 
-			<!-- Introduction -->
-			<div id="introduction" class="basic-1 bg-gray">
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-9">
-							<h2>
-								<%= page.introduction.title %>
-							</h2>
-							<p>
-								<%= page.introduction.text %>
-							</p>
-						</div> <!-- end of col -->
-					</div> <!-- end of row -->
-				</div> <!-- end of container -->
-			</div> <!-- end of basic-1 -->
-			<!-- end of introduction -->
+<!-- Introduction -->
+<div id="introduction" class="basic-1 bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-12 text-center">
+				<h2>
+					<%= page.introduction.title %>
+				</h2>
+				<p>
+					<%= page.introduction.text %>
+				</p>
+			</div> <!-- end of col -->
+		</div> <!-- end of row -->
+	</div> <!-- end of container -->
+</div> <!-- end of basic-1 -->
+<!-- end of introduction -->
 
 
-			<!-- utils for the details1 -->
-			<%- include("utils/details1") %>
+<!-- utils for the details1 -->
+<%- include("utils/details1") %>
 
+<!-- services we offer -->
+<%- include("utils/services") %>
 
-				<!-- Services -->
-				<div id="services" class="cards-1 bg-gray">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-5">
-								<div class="text-container">
-									<h2>
-										<%= page.services.title %>
-									</h2>
-									<p>
-										<%= page.services.text %>
-									</p>
-								</div> <!-- end of text-container -->
-							</div> <!-- end of col -->
-							<div class="col-md-7">
-								<div class="card-container grid-lg-3x grid-2x">
-
-									<!-- Card -->
-									<div class="card">
-										<div class="card-icon">
-											<span class="far fa-arrow-alt-circle-down"></span>
-										</div>
-										<div class="card-body">
-											<h5 class="card-title"><%= page.services.body[0] %></h5>
-										</div>
-									</div>
-									<!-- end of card -->
-
-									<!-- Card -->
-									<div class="card">
-										<div class="card-icon">
-											<span class="far fa-registered"></span>
-										</div>
-										<div class="card-body">
-											<h5 class="card-title"><%= page.services.body[1] %></h5>
-										</div>
-									</div>
-									<!-- end of card -->
-
-									<!-- Card -->
-									<div class="card">
-										<div class="card-icon">
-											<span class="far fa-arrow-alt-circle-up"></span>
-										</div>
-										<div class="card-body">
-											<h5 class="card-title"><%= page.services.body[2] %></h5>
-										</div>
-									</div>
-									<!-- end of card -->
-								</div> <!-- end of container -->
-							</div> <!-- end of col -->
-						</div> <!-- end of row -->
-					</div> <!-- end of container -->
-				</div> <!-- end of cards-1 -->
-				<!-- end of services -->
-
-				<!-- utils for detailse 2 -->
-				<%- include("utils/details2") %>
+<!-- utils for detailse 2 -->
+<%- include("utils/details2") %>
 
 
 
 
-					<!-- utils -->
-					<%- include("utils/invitation") %>
-						<%- include("utils/store") %>
-							<%- include("utils/testimonials") %>
+<!-- utils -->
+<%- include("utils/invitation") %>
+<%- include("utils/store") %>
+<%- include("utils/testimonials") %>
 
-								<!-- components -->
-								<%- include("components/_contact") %>
-									<%- include("components/_footer") %>
-										<%- include("components/_scripts") %>
-											</body>
+<!-- components -->
+<%- include("components/_contact") %>
+<%- include("components/_footer") %>
+<%- include("components/_scripts") %>
+</body>
 
-											</html>
+</html>
