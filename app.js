@@ -40,9 +40,6 @@ app.use("/", require(__dirname + "/router/index"));
 // @desc	for all api route "/"
 // @route	/api
 app.use("/api", require(__dirname + "/router/api"));
-// @desc	for all store route "/"
-// @route	/store
-app.use("/store", require(__dirname + "/router/store"));
 // @desc	for all admin route "/"
 // @route	/admin
 app.use("/admin", require(__dirname + "/router/admin"));
