@@ -142,11 +142,7 @@ a:hover {
 }
 .onHover-primary:hover{
 	color: #fff!important;
-	background-color: #4555d2!important;
-}
-.onHover-transparent:hover{
-	color: #4555d2!important;
-	background-color: transparent!important;
+	background-color: #6b77cf!important;
 }
 
 .btn-solid-reg {
@@ -1627,7 +1623,7 @@ a:hover {
 /* end of min-width 1400px */
 
 /* my code */
-:hover {
+.cursor-pointer:hover {
 	cursor: pointer;
 }
 
