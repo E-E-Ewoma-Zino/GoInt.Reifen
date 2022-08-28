@@ -1,5 +1,5 @@
 {
-	"page": "Gallery",
+	"page": "storeDetails",
 	"meta": {
 		"title": "Get used tires",
 		"description": "Buy your next car tire here. We sell used car ties, we export tires around the world and we recycle tires",
@@ -18,4 +18,4 @@
 	"footer": {
 		"title": "Get affordable car tires here. We would get you that tire"
 	}
-}
+}   

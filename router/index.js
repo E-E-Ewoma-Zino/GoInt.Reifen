@@ -3,6 +3,8 @@ const home = require("../controllers/home/index");
 const aboutUs = require("../controllers/home/aboutUs");
 const services = require("../controllers/home/services");
 const servicesDetails = require("../controllers/home/servicesDetails");
+const store = require("../controllers/home/store");
+const storeDetails = require("../controllers/home/storeDetails");
 
 const router = express.Router();
 
@@ -14,6 +16,12 @@ router.get("/home", (req, res) => home(req, res));
 
 // @desc	About Route
 router.get("/about", (req, res) => aboutUs(req, res));
+
+// @desc	Store Route
+router.get("/store", (req, res) => store(req, res));
+
+// @desc	Store Route
+router.get("/storeDetails", (req, res) => storeDetails(req, res));
 
 // @desc	Services Route
 router.get("/services", (req, res) => services(req, res));
