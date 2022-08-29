@@ -6,6 +6,7 @@ const orders = require("../controllers/admin/order");
 const apiRedirect = require("../middleware/apiRedirect");
 const getReq = require("../api/getReq");
 const deleteMedia = require("../api/deleteMedia");
+const contactme = require("../api/contactme");
 
 // This router is for the home / routes
 const router = express.Router();
@@ -32,5 +33,10 @@ router.delete("/deletemedia", (req, res) => deleteMedia(req, res));
 // @desc	orders page
 // @route	GET /admin/orders
 router.get("/orders", apiRedirect, (req, res) => orders.get(req, res));
+
+
+// @desc	orders page
+// @route	GET /contactme
+router.post("/contactme", (req, res) => contactme(req, res));
 
 module.exports = router;

@@ -19,9 +19,15 @@ contactForm.addEventListener("submit", e => {
 
 	console.log("data", data);
 
-	axios.post("/contactme", data).then(res => {
+	axios.post("/api/contactme", data).then(res => {
 		console.log("res", res.data);
+		document.getElementById("myModalbtn").click();
+		document.querySelector(".modal-title").innerText = res.data.alert;
+		document.querySelector(".modal-body").innerText = res.data.message;
 	}).catch(err => {
 		console.error("error", err);
+		document.getElementById("myModalbtn").click();
+		document.querySelector(".modal-title").innerText = err.response.message;
+		document.querySelector(".modal-body").innerText = err.response.err;
 	});
 });
